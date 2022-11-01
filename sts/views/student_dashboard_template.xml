@@ -1,0 +1,397 @@
+<odoo>
+	<data>
+		<template id="student_template_dashboard" name="Student Dashboard">
+			<t t-call="website.layout">
+				<body>
+					<div class="container">
+						<div class="text-right pt-3">
+							<form class="searchform cf" action="/search">
+								<input type="text" name="search" placeholder="Is it me you’re looking for?" />
+								<button type="submit">
+									Search
+								</button>
+							</form>
+						</div>
+						<section class="cardd-section">
+							<div class="row pt-5">
+								<div class="col-md-12 cardd-part-two">
+									<div class="row">
+										<div class="col-sm-12 col-xxl-12">
+											<div class="block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="justify-content-between align-items-center">
+													<div class="p-3">
+														<img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" alt="" style="width: 120px; height: 130px; float: left;" />
+													</div>
+													<div style="margin-left: 150px;">
+														<h5 class="text-secondary">
+															Name:
+														</h5>
+														<h5 class="text-secondary">
+															Academic Program:
+														</h5>
+														<h5 class="text-secondary">
+															Academic Institute:
+														</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% student_dashboard.total_academic_credit"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Personal Info
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Academic.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Personal Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% student_dashboard.total_professional_credit"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Education Info
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Professional.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/professional_skill_info">
+														<span>
+															View Education Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.authenticate_approved)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Academic Details at Diu
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Authenticate.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_certificate_authenticate_info">
+														<span>
+															View Academic Details at Diu
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.total_endorsement_request)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Registration and Exam Clearence
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Assessment.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Registration and Exam Clearence
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(course_credit_hour)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Financial Details/Ledger
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Endorsement.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/academic_credit_transfer">
+														<span>
+															View Financial Details/Ledger
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.completed_assessment)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Waiver and Scholarship
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Waiver.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/skill_assessment">
+														<span>
+															View Waiver and Scholarship
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.academic_credit_waiver)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Extra Curriculam Activities
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Transfer.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Extra Curriculam Activities
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.credit_exemption)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Disciplinary Action
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Exemption.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Disciplinary Action
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.credit_equivalence)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Hall Info
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Equivalence.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Hall Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% student_dashboard.total_academic_credit"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Laptop Info
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Academic.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+														<span>
+															View Laptop Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% student_dashboard.total_professional_credit"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Mentoring System
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Professional.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/professional_skill_info">
+														<span>
+															View Mentoring System
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 col-xxl-4">
+											<div class="card block block-rounded d-flex flex-column h-100 mb-0">
+												<div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
+													<dl class="mb-0">
+														<dt class="fs-3 fw-bold">
+															<!-- <span t-esc="'%.2f'% float(student_dashboard.authenticate_approved)"></span> -->
+														</dt>
+														<dd class="fs-sm fw-medium fs-sm fw-medium text-muted mb-0">
+															<h5 style="color:MediumSeaGreen;">
+																Alumni Data
+															</h5>
+														</dd>
+													</dl>
+													<div class="item item-rounded-lg bg-body-light">
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Authenticate.png" alt="sbac" />
+													</div>
+												</div>
+												<div class="bg-body-light rounded-bottom">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_certificate_authenticate_info">
+														<span>
+															View Alumni Data
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<br />
+								</div>
+							</div>
+						</section>
+					</div>
+				</body>
+			</t>
+		</template>
+	</data>
+</odoo>

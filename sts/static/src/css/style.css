@@ -1,0 +1,52 @@
+
+/* card-section start */
+.body{
+   background-color: white!important;
+}
+
+.card-one img{
+    background-color: rgba(201, 76, 76, 0.3);
+    width:150px;
+    
+    object-fit: cover;
+    
+}
+
+.fa.fa-user-circle-o{
+    font-size:40px;
+    color: rgb(255, 255, 255);
+}
+.cardd-part-two .card{
+    height:100px;
+    padding-top:25px;
+    color:white;
+}
+.cardd-part-two .c1{
+    background-color: rgb(223, 158, 17);
+}
+.cardd-part-two .c2{
+    background-color: rgb(25, 210, 53);
+}
+.cardd-part-two .c3{
+    background-color: rgb(17, 223, 161)
+}
+.cardd-part-two .c4{
+    background-color: rgb(25, 136, 210);
+}
+.cardd-part-two .c5{
+    background-color: rgb(17, 75, 223);
+}
+.cardd-part-two .c6{
+    background-color: rgb(117, 68, 233);
+}
+.cardd-part-two .c7{
+    background-color: rgb(194, 65, 234);
+}
+.cardd-part-two .c8{
+    background-color: rgb(41, 117, 102);
+}
+.cardd-part-two .c9{
+    background-color: rgb(57, 152, 152);
+}
+
+/* card-section end */
