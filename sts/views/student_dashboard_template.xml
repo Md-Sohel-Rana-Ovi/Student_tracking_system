@@ -1,0 +1,632 @@
+<odoo>
+	<data>
+		<template id="student_template_dashboard" name="Student Dashboard">
+			<t t-call="website.layout">
+				<body>
+					<div class="page container">
+						<!-- Search -->
+						<div class="text-right pt-3">
+							<form class="searchform cf" action="/search">
+								<input type="text" name="search" placeholder="Is it me you’re looking for?" />
+								<button type="submit">
+									Search
+								</button>
+							</form>
+						</div>
+						<section class="cardd-section pt-5">
+							<div class="row">
+								<div class="col-sm-12 col-xxl-12">
+									<div class="block block-rounded d-flex flex-column h-100 mb-0">
+										<div class="justify-content-between align-items-center">
+											<div class="p-3">
+												<img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" alt="" style="width: 120px; height: 130px; float: left;" />
+											</div>
+											<div style="margin-left: 150px;">
+												<h5 class="text-secondary">
+													Name:
+												</h5>
+												<h5 class="text-secondary">
+													Academic Program:
+												</h5>
+												<h5 class="text-secondary">
+													Academic Institute:
+												</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br />
+							<!-- Dashboard Body -->
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Personal Info :
+										<!--
+										<span t-field="data.total_professional_credit">
+										</span>
+										-->
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 rounded">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="20%">
+														Name
+													</th>
+													<th width="20%">
+														Father Name
+													</th>
+													<th width="20%"> 
+														Mother Name
+													</th>
+													<th width="20%">
+														Mobile Number
+													</th>
+													<th width="20%">
+														Address
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
+											t-as="professional">
+											<tr>
+											<td>
+											<t t-esc="professional.name"/>
+											</td>
+											<td>
+											<t t-esc="professional.department"/>
+											</td>
+											<td>
+											<t t-esc="professional.designation"/>
+											</td>
+											<td>
+											<t t-esc="professional.work_start_date"/>
+											</td>
+											<td>
+											<t t-esc="professional.work_end_date"/>
+											</td>
+											<td>
+											<t t-esc="professional.duration"/>
+											</td>
+											
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Education Info :
+										<!--
+										<span t-field="data.total_professional_credit">
+										</span>
+										-->
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 rounded">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="15%">
+														SSC
+													</th>
+													<th width="15%">
+														HSC
+													</th>
+													<th width="15%">
+														B.Sc.in Cse
+													</th>
+													<th width="15%">
+														School Name
+													</th>
+													<th width="20%">
+														Collage Name
+													</th>
+													<th width="20%">
+														Univarsity Name
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
+											t-as="professional">
+											<tr>
+											<td>
+											<t t-esc="professional.name"/>
+											</td>
+											<td>
+											<t t-esc="professional.department"/>
+											</td>
+											<td>
+											<t t-esc="professional.designation"/>
+											</td>
+											<td>
+											<t t-esc="professional.work_start_date"/>
+											</td>
+											<td>
+											<t t-esc="professional.work_end_date"/>
+											</td>
+											<td>
+											<t t-esc="professional.duration"/>
+											</td>
+											
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Academic Info at DIU :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="20%">
+														Program
+													</th>
+													<th width="20%">
+														Course
+													</th>
+													<th width="20%">
+														Credit
+													</th>
+													<th width="20%">
+														Grade
+													</th>
+													<th width="20%">
+														CGPA
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.apply_for_assessment_ids" t-as="course">
+											<tr>
+											<td>
+											<t t-esc="course.exam_name_id.name"/>
+											</td>
+											<td>
+											<t t-esc="course.exam_type"/>
+											</td>
+											<td>
+											<t t-esc="course.total_marks"/>
+											
+											</td>
+											<td>
+											<t t-esc="course.result"/>
+											</td>
+											</tr>
+											</t>
+											
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Financial Details/Ledger :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="40%">
+														Total Payable
+													</th>
+													<th width="30%">
+														Total Paid
+													</th>
+													<th width="30%">
+														Due
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.endorsement_request_list_ids" t-as="endorsement">
+											<tr>
+											<td>
+											<t t-esc="endorsement.endorsement_id.name"/>
+											</td>
+											<td>
+											<t t-esc="endorsement.endorsement_note"/>
+											</td>
+											<td>
+											<t t-esc="endorsement.date"/>
+											
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Registration and Exam Clearence :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="25%">
+														Semester
+													</th>
+													<th width="25%">
+														Reg.No
+													</th>
+													<th width="25%">
+														Mid Clearence
+													</th>
+													<th width="25%">
+														Final Clearence
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.award_achievement_ids" t-as="achievement">
+											<tr>
+											<td>
+											<t t-esc="achievement.award_name"/>
+											</td>
+											<td>
+											<t t-esc="achievement.interest_description"/>
+											</td>
+											<td>
+											<t t-esc="achievement.award_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Waiver and Scholarship :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="25%">
+														Semester
+													</th>
+													<th width="25%">
+														Waiver
+													</th>
+													<th width="25%">
+														W.Amount
+													</th>
+													<th width="25%">
+														W.Type
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Extra Curriculumn Activities :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="20%">
+														Achivement
+													</th>
+													<th width="20%">
+														Award
+													</th>
+													<th width="20%">
+														Club
+													</th>
+													<th width="20%">
+														BNCC
+													</th>
+													<th width="20%">
+														Scout
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Disciplinary Action :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="35%">
+														Semester
+													</th>
+													<th width="30%">
+														Issue
+													</th>
+													<th width="35%">
+														Decision
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Hall Info :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="35%">
+														Semester
+													</th>
+													<th width="30%">
+														Due
+													</th>
+													<th width="35%">
+														Activity
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Mentoring System :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="25%">
+														Semester
+													</th>
+													<th width="25%">
+														Waiver
+													</th>
+													<th width="25%">
+														W.Amount
+													</th>
+													<th width="25%">
+														W.Type
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Alumni Data :
+									</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12 round">
+									<div class="row mt-3 ">
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr>
+													<th width="30%">
+														Status
+													</th>
+													<th width="35%">
+														Organization
+													</th>
+													<th width="35%">
+														Date
+													</th>
+												</tr>
+											</thead>
+											<!--
+											<tbody>
+											<t t-foreach="data.publication_ids" t-as="publication">
+											<tr>
+											<td>
+											<t t-esc="publication.publication_name"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_date"/>
+											</td>
+											<td>
+											<t t-esc="publication.publication_description"/>
+											</td>
+											</tr>
+											</t>
+											</tbody>
+											-->
+										</table>
+									</div>
+								</div>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-md-12 col-12">
+									<h5>
+										Laptop :
+									</h5>
+								</div>
+							</div>
+						</section>
+					</div>
+				</body>
+			</t>
+		</template>
+	</data>
+</odoo>
