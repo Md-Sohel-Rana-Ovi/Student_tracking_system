@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/css_loader.xml',
         'views/student_dashboard_template.xml',
+        'views/student_personal_info_template.xml',     
     ],
     # only loaded in demonstration mode
     'demo': [

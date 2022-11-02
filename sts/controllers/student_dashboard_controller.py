@@ -13,3 +13,15 @@ class StsDashboard(http.Controller):
 
 
         return request.render('sts.student_template_dashboard', {})
+
+
+
+class PersonalInfo(http.Controller):
+    @http.route('/personal/info', auth='public', website=True)
+    def dashboard(self, **kw):
+
+
+        return request.render('sts.student_personal_info_template', {})
+         
+
+

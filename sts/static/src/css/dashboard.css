@@ -1,7 +1,7 @@
 
 body {
     color: #566787;
-    background: rgb(233, 223, 233);
+    background: linear-gradient(#fff,#ebebeb) repeat scroll 0 0 transparent;
     font-family: 'Varela Round', sans-serif;
     font-size: 13px;
 }
@@ -14,5 +14,7 @@ body {
     color: black;
 
 }
+
+
 
 
