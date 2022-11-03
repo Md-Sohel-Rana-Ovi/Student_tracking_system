@@ -5,14 +5,14 @@
 				<body>
 					<div class="container pt-2">
 						<div class="text-right pt-2">
-							<form class="searchform cf" action="/search">
-								<input class="rounded" type="text" name="search" placeholder="Is it me you’re looking for?" />
+							<form class="searchform cf" action="/dashboard">
+								<input class="rounded" type="text" name="student_id" placeholder="Is it me you’re looking for?" />
 								<button class="rounded" type="submit">
 									Search
 								</button>
 							</form>
 						</div>
-						<hr/>
+						<hr />
 						<section class="cardd-section">
 							<div class="row pt-5">
 								<div class="col-md-12 cardd-part-two">
@@ -21,18 +21,26 @@
 											<div class="block block-rounded d-flex flex-column h-100 mb-0">
 												<div class="justify-content-between align-items-center">
 													<div class="p-3">
-														<img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" alt="" style="width: 120px; height: 130px; float: left;" />
+														<t t-if="student_info">
+															<img class="rounded-circle" t-att-src="'data:image/png;base64,%s' % to_text(student_info['studentPhoto'])" alt="" style="width: 110px; height: 120px; float: left;" />
+														</t>
+														<t t-else="">
+															<img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" alt="" style="width: 120px; height: 130px; float: left;" />
+														</t>
 													</div>
-													<div style="margin-left: 150px;">
-														<h5 class="text-secondary">
-															Name:<span id="student_name"></span>
-														</h5>
-														<h5 class="text-secondary">
-															Academic Program:<span id="student_program"></span>
-														</h5>
-														<h5 class="text-secondary">
-															Academic Institute:<span id="student_program"></span>
-														</h5>
+													<div style="margin-left: 150px; margin-bottom: 15px;">
+														<h6 class="text-dark">
+															Name:
+													            <span t-if="student_info" t-esc="student_info['firstName']"/>
+														</h6>
+														<h6 class="text-dark">
+															Academic Program:
+															<span t-if="student_info" t-esc="student_info['programName']" />
+														</h6>
+														<h6 class="text-dark">
+															Department Name:
+															<span t-if="student_info" t-esc="student_info['departmentName']" />
+														</h6>
 													</div>
 												</div>
 											</div>
@@ -86,7 +94,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/professional_skill_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/educational/info">
 														<span>
 															View Education Info
 														</span>
@@ -114,7 +122,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_certificate_authenticate_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/academic/info">
 														<span>
 															View Academic Details at Diu
 														</span>
@@ -145,7 +153,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/registration_and_exam/clearence">
 														<span>
 															View Registration and Exam Clearence
 														</span>
@@ -173,7 +181,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/academic_credit_transfer">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/financial_and_ledger/info">
 														<span>
 															View Financial Details/Ledger
 														</span>
@@ -201,7 +209,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/skill_assessment">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/waiver_and_scholarship/info">
 														<span>
 															View Waiver and Scholarship
 														</span>
@@ -232,7 +240,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/extra_curriculam/activity">
 														<span>
 															View Extra Curriculam Activities
 														</span>
@@ -260,7 +268,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action">
 														<span>
 															View Disciplinary Action
 														</span>
@@ -288,7 +296,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/hall/info">
 														<span>
 															View Hall Info
 														</span>
@@ -319,7 +327,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_academic_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/laptop/info">
 														<span>
 															View Laptop Info
 														</span>
@@ -347,7 +355,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/professional_skill_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/mentoring/system">
 														<span>
 															View Mentoring System
 														</span>
@@ -375,7 +383,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/student_certificate_authenticate_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/alumni/data">
 														<span>
 															View Alumni Data
 														</span>

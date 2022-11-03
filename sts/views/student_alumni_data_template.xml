@@ -1,6 +1,6 @@
 <odoo>
 	<data>
-		<template id="student_personal_info_template" name="Student Personal Info">
+		<template id="student_alumni_data_template" name="Student Personal Info">
 			<t t-call="website.layout">
 				<body>
 					<div class="container">
@@ -12,16 +12,16 @@
 											<div class="col-sm-6">
 												<h2>
 													<b>
-														Personal Info
+														Alumni Data
 													</b>
 												</h2>
 											</div>
 											<div class="col-sm-6">
-												<!-- <a href="/dashboard?student_id=171-15-9367" class="btn btn-info">
+												<!-- <a href="/dashboard" class="btn btn-info">
 													<i class="bi bi-arrow-left-circle-fill">
 													</i>
 													<span>
-														Back to Dashboard dfdfdf
+														Back to Dashboard
 													</span>
 												</a> -->
 											</div>
@@ -30,37 +30,45 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="25%">
-													Name
+												<th width="30%">
+													Status
 												</th>
-												<th width="25%">
-													Email Address
+												<th width="35%">
+													Organization
 												</th>
-												<th width="25%">
-													Mobile Number
-												</th>
-												<th width="25%">
-													StudentId
+												<th width="35%">
+													Date
 												</th>
 											</tr>
 										</thead>
-										
+										<!--
 										<tbody>
+										<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
+										t-as="professional">
 										<tr>
 										<td>
-										<!-- <t t-esc="student_info['firstName']"/> -->
+										<t t-esc="professional.name"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['email']"/> -->
+										<t t-esc="professional.department"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['mobile']"/> -->
+										<t t-esc="professional.designation"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['studentId']"/> -->
+										<t t-esc="professional.work_start_date"/>
 										</td>
+										<td>
+										<t t-esc="professional.work_end_date"/>
+										</td>
+										<td>
+										<t t-esc="professional.duration"/>
+										</td>
+										
 										</tr>
+										</t>
 										</tbody>
+										-->
 									</table>
 								</div>
 							</div>
