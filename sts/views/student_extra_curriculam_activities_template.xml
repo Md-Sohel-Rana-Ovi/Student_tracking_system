@@ -47,34 +47,26 @@
 												</th>
 											</tr>
 										</thead>
-										<!--
+										
 										<tbody>
-										<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
-										t-as="professional">
 										<tr>
 										<td>
-										<t t-esc="professional.name"/>
+										<p>Programming Contrast</p>
 										</td>
 										<td>
-										<t t-esc="professional.department"/>
+										<p>Book published</p>
 										</td>
 										<td>
-										<t t-esc="professional.designation"/>
+										<p>Computing</p>
 										</td>
 										<td>
-										<t t-esc="professional.work_start_date"/>
+										<p>No</p>
 										</td>
 										<td>
-										<t t-esc="professional.work_end_date"/>
-										</td>
-										<td>
-										<t t-esc="professional.duration"/>
-										</td>
-										
+										<p>No</p>
+										</td>									
 										</tr>
-										</t>
-										</tbody>
-										-->
+										</tbody>										
 									</table>
 								</div>
 							</div>

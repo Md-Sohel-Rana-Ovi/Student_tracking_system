@@ -44,34 +44,23 @@
 												</th>
 											</tr>
 										</thead>
-										<!--
+										
 										<tbody>
-										<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
-										t-as="professional">
 										<tr>
 										<td>
-										<t t-esc="professional.name"/>
+										<p>12th Semester</p>
 										</td>
 										<td>
-										<t t-esc="professional.department"/>
+										<p>5000</p>
 										</td>
 										<td>
-										<t t-esc="professional.designation"/>
+										<p>60000</p>
 										</td>
 										<td>
-										<t t-esc="professional.work_start_date"/>
+										<p>result</p>
 										</td>
-										<td>
-										<t t-esc="professional.work_end_date"/>
-										</td>
-										<td>
-										<t t-esc="professional.duration"/>
-										</td>
-										
 										</tr>
-										</t>
-										</tbody>
-										-->
+										</tbody>										
 									</table>
 								</div>
 							</div>

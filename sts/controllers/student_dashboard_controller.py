@@ -11,9 +11,9 @@ _logger = logging.getLogger(__name__)
 class StsDashboard(http.Controller):
     @http.route('/dashboard', auth='public', website=True)
     def dashboard(self, **kw):
-        # print(kw)
-        # print(kw)
-        # print(kw)
+        print(kw)
+        print(kw)
+        print(kw)
         student_info = None
         if kw.get('student_id',False):
             student_info = self.get_student_info(kw['student_id'])

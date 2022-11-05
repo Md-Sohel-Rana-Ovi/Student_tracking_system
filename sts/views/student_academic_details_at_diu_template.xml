@@ -31,10 +31,10 @@
 										<thead>
 											<tr>
 												<th width="20%">
-													Program
+													Institute
 												</th>
 												<th width="20%">
-													Course
+													Program
 												</th>
 												<th width="20%">
 													Credit
@@ -47,34 +47,32 @@
 												</th>
 											</tr>
 										</thead>
-										<!--
+										
 										<tbody>
-										<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
-										t-as="professional">
 										<tr>
 										<td>
-										<t t-esc="professional.name"/>
+										<p>Daffodil Univarsity</p>
+										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<t t-esc="professional.department"/>
+										<p>B.Sc. in Computer Science and Engineering</p>
+										<!-- <t t-esc="professional.department"/> -->
 										</td>
 										<td>
-										<t t-esc="professional.designation"/>
+										<p>150</p>
+										<!-- <t t-esc="professional.designation"/> -->
 										</td>
 										<td>
-										<t t-esc="professional.work_start_date"/>
+										<p>4</p>
+										<!-- <t t-esc="professional.work_start_date"/> -->
 										</td>
 										<td>
-										<t t-esc="professional.work_end_date"/>
-										</td>
-										<td>
-										<t t-esc="professional.duration"/>
-										</td>
-										
-										</tr>
-										</t>
+										<p>3.81</p>
+										<!-- <t t-esc="professional.work_end_date"/> -->
+										</td>				
+										</tr>			
 										</tbody>
-										-->
+										
 									</table>
 								</div>
 							</div>
