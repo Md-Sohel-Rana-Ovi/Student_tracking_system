@@ -48,16 +48,16 @@
 										<tbody>
 										<tr>
 										<td>
-										<!-- <t t-esc="student_info['firstName']"/> -->
+										<t t-if="student_info" t-esc="student_info['firstName']"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['email']"/> -->
+										<t t-if="student_info" t-esc="student_info['email']"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['mobile']"/> -->
+										<t t-if="student_info" t-esc="student_info['mobile']"/>
 										</td>
 										<td>
-										<!-- <t t-esc="student_info['studentId']"/> -->
+										<t t-if="student_info" t-esc="student_info['studentId']"/>
 										</td>
 										</tr>
 										</tbody>

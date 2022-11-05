@@ -29,17 +29,17 @@
 														</t>
 													</div>
 													<div style="margin-left: 150px; margin-bottom: 15px;">
-														<h6 class="text-dark">
+														<h6 style="color:black;">
 															Name:
-													            <span t-if="student_info" t-esc="student_info['firstName']"/>
+													            <span class="text-info" t-if="student_info" t-esc="student_info['firstName']"/>
 														</h6>
-														<h6 class="text-dark">
+														<h6 style="color:black;">
 															Academic Program:
-															<span t-if="student_info" t-esc="student_info['programName']" />
+															<span class="text-info" t-if="student_info" t-esc="student_info['programName']" />
 														</h6>
-														<h6 class="text-dark">
+														<h6 style="color:black;">
 															Department Name:
-															<span t-if="student_info" t-esc="student_info['departmentName']" />
+															<span class="text-info" t-if="student_info" t-esc="student_info['departmentName']" />
 														</h6>
 													</div>
 												</div>
@@ -66,7 +66,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/personal/info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
 														<span>
 															View Personal Info
 														</span>
