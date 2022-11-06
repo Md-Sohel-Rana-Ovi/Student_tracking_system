@@ -62,7 +62,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Academic.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/personal.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -129,7 +129,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Authenticate.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/academic.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
