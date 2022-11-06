@@ -17,13 +17,15 @@
 												</h2>
 											</div>
 											<div class="col-sm-6">
-												<!-- <a href="/dashboard" class="btn btn-info">
-													<i class="bi bi-arrow-left-circle-fill">
-													</i>
-													<span>
-														Back to Dashboard
-													</span>
-												</a> -->
+												<!--
+												<a href="/dashboard" class="btn btn-info">
+												<i class="bi bi-arrow-left-circle-fill">
+												</i>
+												<span>
+												Back to Dashboard
+												</span>
+												</a>
+												-->
 											</div>
 										</div>
 									</div>
@@ -41,34 +43,25 @@
 												</th>
 											</tr>
 										</thead>
-										<!--
 										<tbody>
-										<t t-foreach="data.professional_skill_info_details_ids.professional_skill_line_ids"
-										t-as="professional">
-										<tr>
-										<td>
-										<t t-esc="professional.name"/>
-										</td>
-										<td>
-										<t t-esc="professional.department"/>
-										</td>
-										<td>
-										<t t-esc="professional.designation"/>
-										</td>
-										<td>
-										<t t-esc="professional.work_start_date"/>
-										</td>
-										<td>
-										<t t-esc="professional.work_end_date"/>
-										</td>
-										<td>
-										<t t-esc="professional.duration"/>
-										</td>
-										
-										</tr>
-										</t>
+											<tr>
+												<td>
+													<p>
+														Yes
+													</p>
+												</td>
+												<td>
+													<p>
+														DCL
+													</p>
+												</td>
+												<td>
+													<p>
+														06-11-22
+													</p>
+												</td>
+											</tr>
 										</tbody>
-										-->
 									</table>
 								</div>
 							</div>

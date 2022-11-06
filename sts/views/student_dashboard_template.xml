@@ -66,6 +66,7 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
+												<t t-if="student_info">
 													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
 														<span>
 															View Personal Info
@@ -73,6 +74,16 @@
 														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
 														</i>
 													</a>
+													</t>
+													<t t-else="">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/personal/info">
+														<span>
+															View Personal Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+													</a>
+													</t>
 												</div>
 											</div>
 										</div>
