@@ -30,23 +30,17 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="15%">
-													SSC
+												<th width="25%">
+													Exam
 												</th>
-												<th width="15%">
-													HSC
+												<th width="25%">
+													Education Organization
 												</th>
-												<th width="15%">
-													B.Sc.in Cse
+												<th width="25%">
+													Passing Year
 												</th>
-												<th width="15%">
-													School Name
-												</th>
-												<th width="20%">
-													Collage Name
-												</th>
-												<th width="20%">
-													Univarsity Name
+												<th width="25%">
+													Result
 												</th>
 											</tr>
 										</thead>
@@ -54,28 +48,38 @@
 										<tbody>
 										<tr>
 										<td>
-										<p>4.83</p>
+										<p>SSC</p>
 										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>5.0</p>
+										<p>Abc High School</p>
 										<!-- <t t-esc="professional.department"/> -->
 										</td>
 										<td>
-										<p>3.81</p>
+										<p>2010</p>
 										<!-- <t t-esc="professional.designation"/> -->
 										</td>
 										<td>
-										<p>Monipur High School</p>
+										<p>4.5</p>
 										<!-- <t t-esc="professional.work_start_date"/> -->
+										</td>	
+										</tr>
+										<tr>
+										<td>
+										<p>HSC</p>
+										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>Dhaka City Collage</p>
-										<!-- <t t-esc="professional.work_end_date"/> -->
+										<p>Abc High Collage</p>
+										<!-- <t t-esc="professional.department"/> -->
 										</td>
 										<td>
-										<p>Daffodil Univarsity</p>
-										<!-- <t t-esc="professional.work_end_date"/> -->
+										<p>2012</p>
+										<!-- <t t-esc="professional.designation"/> -->
+										</td>
+										<td>
+										<p>4.81</p>
+										<!-- <t t-esc="professional.work_start_date"/> -->
 										</td>	
 										</tr>
 										</tbody>

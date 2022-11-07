@@ -11,13 +11,10 @@ _logger = logging.getLogger(__name__)
 class StsDashboard(http.Controller):
     @http.route('/dashboard', auth='public', website=True)
     def dashboard(self, **kw):
-        print(kw)
-        print(kw)
-        print(kw)
+        # print(kw)
         student_info = None
         if kw.get('student_id',False):
             student_info = self.get_student_info(kw['student_id'])
-            print(student_info)
 
         return request.render('sts.student_template_dashboard', {
             "student_info":student_info
@@ -46,12 +43,10 @@ class StsStudentInfo(http.Controller):
     @http.route('/personal/info', auth='public', website=True)
     def pesonal_info(self, **kw):
         # print(kw)
-        # print(kw)
-        # user = requests.Session()
         student_info = None
         if kw.get('student_id',False):
             student_info = self.get_student_info(kw['student_id'])
-            print(student_info)
+            
 
 
         return request.render('sts.student_personal_info_template', {
@@ -59,11 +54,27 @@ class StsStudentInfo(http.Controller):
         })
 
 
+    # def get_student_info(self, student_id):
+    #     try:
+    #         url = "http://api.diu.edu.bd/api/v1/studentDetails?clientId=kpiApp&clientSecret=r5ty45ehg56fger45tg4o&studentId=" + str(student_id)
+    #         headers = {
+    #             "Content-Type": "application/json",
+    #         }
+    #         response = requests.get(url=url, headers=headers)
+    #         if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+    #             data = response.json()
+    #             return data
+    #         return None
+    #     except:
+    #         return None    
+
     def get_student_info(self, student_id):
         try:
-            url = "http://api.diu.edu.bd/api/v1/studentDetails?clientId=kpiApp&clientSecret=r5ty45ehg56fger45tg4o&studentId=" + str(student_id)
+            url = "http://apps.diu.edu.bd:8043/rest/smis/v3/student-basic-info/student/" + str(student_id)
             headers = {
                 "Content-Type": "application/json",
+                "clientId": "30a95867787d446e9dd0bb7b06d61c54",
+                "clientSecret": "d4b2538a-1398-470c-859e-4fb11ee296c7",
             }
             response = requests.get(url=url, headers=headers)
             if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
@@ -72,6 +83,7 @@ class StsStudentInfo(http.Controller):
             return None
         except:
             return None    
+        
         
 
     @http.route('/educational/info', auth='public', website=True)
@@ -84,7 +96,16 @@ class StsStudentInfo(http.Controller):
     def academic_info(self, **kw):
 
 
-        return request.render('sts.student_academic_info_template', {})      
+        return request.render('sts.student_academic_info_template', {}) 
+
+    @http.route('/academic/info/details', auth='public', website=True)
+    def academic_info_detail(self, **kw):
+
+
+        return request.render('sts.academic_info_detail_template', {})         
+
+
+        academic_info
 
     @http.route('/registration_and_exam/clearence', auth='public', website=True)
     def registration_and_exam_clearence(self, **kw):

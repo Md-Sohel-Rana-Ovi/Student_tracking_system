@@ -17,13 +17,15 @@
 												</h2>
 											</div>
 											<div class="col-sm-6">
-												<!-- <a href="/dashboard" class="btn btn-info">
-													<i class="bi bi-arrow-left-circle-fill">
-													</i>
-													<span>
-														Back to Dashboard
-													</span>
-												</a> -->
+												<!--
+												<a href="/dashboard" class="btn btn-info">
+												<i class="bi bi-arrow-left-circle-fill">
+												</i>
+												<span>
+												Back to Dashboard
+												</span>
+												</a>
+												-->
 											</div>
 										</div>
 									</div>
@@ -45,38 +47,126 @@
 												<th width="20%">
 													CGPA
 												</th>
+												<th width="20%">
+													Action
+												</th>
 											</tr>
 										</thead>
-										
 										<tbody>
-										<tr>
-										<td>
-										<p>Daffodil Univarsity</p>
-										<!-- <t t-esc="professional.name"/> -->
-										</td>
-										<td>
-										<p>B.Sc. in Computer Science and Engineering</p>
-										<!-- <t t-esc="professional.department"/> -->
-										</td>
-										<td>
-										<p>150</p>
-										<!-- <t t-esc="professional.designation"/> -->
-										</td>
-										<td>
-										<p>4</p>
-										<!-- <t t-esc="professional.work_start_date"/> -->
-										</td>
-										<td>
-										<p>3.81</p>
-										<!-- <t t-esc="professional.work_end_date"/> -->
-										</td>				
-										</tr>			
+											<tr>
+												<td>
+													<p>
+														Daffodil Univarsity
+													</p>
+													<!-- <t t-esc="professional.name"/> -->
+												</td>
+												<td>
+													<p>
+														B.Sc. in Computer Science and Engineering
+													</p>
+													<!-- <t t-esc="professional.department"/> -->
+												</td>
+												<td>
+													<p>
+														150
+													</p>
+													<!-- <t t-esc="professional.designation"/> -->
+												</td>
+												<td>
+													<p>
+														4
+													</p>
+													<!-- <t t-esc="professional.work_start_date"/> -->
+												</td>
+												<td>
+													<p>
+														3.81
+													</p>
+													<!-- <t t-esc="professional.work_end_date"/> -->
+												</td>
+												<td>
+													<a href="/academic/info/details" class="edit">
+														<p>
+															Details
+														</p>
+													</a>
+												</td>
+											</tr>
 										</tbody>
-										
 									</table>
 								</div>
 							</div>
 						</div>
+					</div>
+				</body>
+			</t>
+		</template>
+		<!-- update template -->
+		<template id="academic_info_detail_template" name="Academic Info Detail">
+			<t t-call="website.layout">
+				<body>
+					<div class="container pt-5">
+						<div class="card card-default">
+							<div class="card-body">
+								<table class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th width="50%">
+												Course name
+											</th>
+											<th width="50%">
+												Grade Point
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<p>
+													Cumputer Fundamental
+												</p>
+												<!-- <t t-esc="professional.name"/> -->
+											</td>
+											<td>
+												<p>
+													4.0
+												</p>
+												<!-- <t t-esc="professional.department"/> -->
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>
+													Java
+												</p>
+												<!-- <t t-esc="professional.name"/> -->
+											</td>
+											<td>
+												<p>
+													4.0
+												</p>
+												<!-- <t t-esc="professional.department"/> -->
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>
+													Algorithm
+												</p>
+												<!-- <t t-esc="professional.name"/> -->
+											</td>
+											<td>
+												<p>
+													3.81
+												</p>
+												<!-- <t t-esc="professional.department"/> -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<br />
 					</div>
 				</body>
 			</t>

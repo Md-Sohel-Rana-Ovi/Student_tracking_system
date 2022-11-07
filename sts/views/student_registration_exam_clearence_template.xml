@@ -30,16 +30,13 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="25%">
+												<th width="40%">
 													Semester
 												</th>
-												<th width="25%">
-													Reg.No
-												</th>
-												<th width="25%">
+												<th width="30%">
 													Mid Clearence
 												</th>
-												<th width="25%">
+												<th width="30%">
 													Final Clearence
 												</th>
 											</tr>
@@ -52,14 +49,10 @@
 										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>229-3445-345</p>
-										<!-- <t t-esc="professional.department"/> -->
+										<p>Yes</p>
 										</td>
 										<td>
-										<p>full paid</p>
-										</td>
-										<td>
-										<p>full paid</p>
+										<p>Yes</p>
 										<!-- <t t-esc="professional.work_start_date"/> -->
 										</td>	
 										</tr>
