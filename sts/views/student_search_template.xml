@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+		<template id="student_student_search_template" name="Student Dashboard">
+			<t t-call="website.layout">
+				<body>
+					<div class="container pt-2">
+						<div class="text-center pt-2">
+							<form class="searchform cf" action="/search">
+								<input class="rounded w-25 " type="text" name="student_id" placeholder="Is it me you’re looking for?" />
+								<button class="rounded" type="submit">
+									Search
+								</button>
+							</form>
+						</div>
+						<section class="cardd-section">
+						</section>
+					</div>
+				</body>
+			</t>
+		</template>
+	</data>
+</odoo>

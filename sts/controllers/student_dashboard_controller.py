@@ -163,3 +163,13 @@ class StsStudentInfo(http.Controller):
 
 
         return request.render('sts.student_alumni_data_template', {}) 
+
+
+    @http.route('/search', auth='public', website=True)
+    def search_view(self, **kw):
+
+
+        return request.render('sts.student_student_search_template', {})     
+
+
+        
