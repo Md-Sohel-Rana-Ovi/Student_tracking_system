@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/sts/static/src/css/dashboard_min.css"/>
         <link rel="stylesheet" href="/sts/static/src/css/student_portal.css"/> 
         <link rel="stylesheet" href="/sts/static/src/css/dashboard.css"/>
+        <script src="/sts/static/src/js/dashboard.js"></script>
       </xpath>
     </template>
   </data>
