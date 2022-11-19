@@ -4,10 +4,10 @@
     <!-- Load css File -->
     <template id="assets_frontend"  inherit_id="website.assets_frontend">
       <xpath expr="." position="inside">
-        <link rel="stylesheet" href="/sts/static/src/css/dashboard_min.css"/>
-        <link rel="stylesheet" href="/sts/static/src/css/student_portal.css"/> 
-        <link rel="stylesheet" href="/sts/static/src/css/dashboard.css"/>
-        <script src="/sts/static/src/js/dashboard.js"></script>
+        <link rel="stylesheet" href="/student_tracking_system/static/src/css/dashboard_min.css"/>
+        <link rel="stylesheet" href="/student_tracking_system/static/src/css/student_portal.css"/> 
+        <link rel="stylesheet" href="/student_tracking_system/static/src/css/dashboard.css"/>
+        <script src="/student_tracking_system/static/src/js/dashboard.js"></script>
       </xpath>
     </template>
   </data>

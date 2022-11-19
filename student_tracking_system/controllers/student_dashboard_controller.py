@@ -16,7 +16,7 @@ class StsDashboard(http.Controller):
         if kw.get('student_id',False):
             student_info = self.get_student_info(kw['student_id'])
 
-        return request.render('sts.student_template_dashboard', {
+        return request.render('student_tracking_system.student_template_dashboard', {
             "student_info":student_info
         })
 
@@ -49,7 +49,7 @@ class StsStudentInfo(http.Controller):
             
 
 
-        return request.render('sts.student_personal_info_template', {
+        return request.render('student_tracking_system.student_personal_info_template', {
              "student_info":student_info
         })
 
@@ -90,19 +90,19 @@ class StsStudentInfo(http.Controller):
     def educational_info(self, **kw):
 
 
-        return request.render('sts.student_educational_info_template', {})  
+        return request.render('student_tracking_system.student_educational_info_template', {})  
 
     @http.route('/academic/info', auth='public', website=True)
     def academic_info(self, **kw):
 
 
-        return request.render('sts.student_academic_info_template', {}) 
+        return request.render('student_tracking_system.student_academic_info_template', {}) 
 
     @http.route('/academic/info/details', auth='public', website=True)
     def academic_info_detail(self, **kw):
 
 
-        return request.render('sts.academic_info_detail_template', {})         
+        return request.render('student_tracking_system.academic_info_detail_template', {})         
 
 
         academic_info
@@ -111,19 +111,19 @@ class StsStudentInfo(http.Controller):
     def registration_and_exam_clearence(self, **kw):
 
 
-        return request.render('sts.student_registration_and_exam_clearence_template', {})
+        return request.render('student_tracking_system.student_registration_and_exam_clearence_template', {})
 
     @http.route('/financial_and_ledger/info', auth='public', website=True)
     def financial_and_ledger_info(self, **kw):
 
 
-        return request.render('sts.student_financial_and_ledger_info_template', {})
+        return request.render('student_tracking_system.student_financial_and_ledger_info_template', {})
 
     @http.route('/waiver_and_scholarship/info', auth='public', website=True)
     def waiver_and_scholarship_info(self, **kw):
 
 
-        return request.render('sts.student_waiver_and_scholarship_info_template', {})         
+        return request.render('student_tracking_system.student_waiver_and_scholarship_info_template', {})         
     
 
 
@@ -131,45 +131,45 @@ class StsStudentInfo(http.Controller):
     def extra_curriculam_activity(self, **kw):
 
 
-        return request.render('sts.student_extra_curriculam_activity_template', {}) 
+        return request.render('student_tracking_system.student_extra_curriculam_activity_template', {}) 
 
     @http.route('/disciplinary/action', auth='public', website=True)
     def disciplinary_action(self, **kw):
 
 
-        return request.render('sts.student_disciplinary_action_template', {}) 
+        return request.render('student_tracking_system.student_disciplinary_action_template', {}) 
 
     @http.route('/hall/info', auth='public', website=True)
     def hall_info(self, **kw):
 
 
-        return request.render('sts.student_hall_info_template', {}) 
+        return request.render('student_tracking_system.student_hall_info_template', {}) 
 
 
     @http.route('/laptop/info', auth='public', website=True)
     def laptop_info(self, **kw):
 
 
-        return request.render('sts.student_laptop_info_template', {}) 
+        return request.render('student_tracking_system.student_laptop_info_template', {}) 
    
     @http.route('/mentoring/system', auth='public', website=True)
     def mentoring_system(self, **kw):
 
 
-        return request.render('sts.student_mentoring_system_template', {}) 
+        return request.render('student_tracking_system.student_mentoring_system_template', {}) 
 
     @http.route('/alumni/data', auth='public', website=True)
     def alumni_data(self, **kw):
 
 
-        return request.render('sts.student_alumni_data_template', {}) 
+        return request.render('student_tracking_system.student_alumni_data_template', {}) 
 
 
     @http.route('/search', auth='public', website=True)
     def search_view(self, **kw):
 
 
-        return request.render('sts.student_student_search_template', {})     
+        return request.render('student_tracking_system.student_student_search_template', {})     
 
 
         

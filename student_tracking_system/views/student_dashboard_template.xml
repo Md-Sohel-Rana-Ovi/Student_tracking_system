@@ -4,15 +4,19 @@
 			<t t-call="website.layout">
 				<body>
 					<div class="container pt-2">
-						<div class="text-right pt-2">
-							<form class="searchform cf" action="/dashboard">
-								<input class="rounded" type="text" name="student_id" placeholder="Search By student Id?" />
-								<button class="rounded" type="submit">
-									Search
-								</button>
-							</form>
+						<div class="row">
+							<div class="pt-2">
+								<form class="searchform cf" action="/dashboard">
+									<input class="rounded" type="text" name="student_id" placeholder="Search By student Id?" />
+									<button class="rounded" type="submit">
+										Search
+									</button>
+								</form>
+							</div>
 						</div>
-						<hr />
+					</div>
+					<hr/>
+					<div class="container">
 						<section class="cardd-section">
 							<div class="row pt-5">
 								<div class="col-md-12 cardd-part-two">
@@ -65,7 +69,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/personal.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/personal.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -104,7 +108,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Professional.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Professional.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -132,7 +136,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/academic.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/academic.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -163,7 +167,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Assessment.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Assessment.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -191,7 +195,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Endorsement.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Endorsement.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -219,7 +223,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Waiver.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Waiver.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -250,7 +254,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Transfer.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Transfer.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -278,7 +282,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Exemption.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Exemption.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -306,7 +310,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Equivalence.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Equivalence.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -337,7 +341,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/academic.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/academic.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -365,7 +369,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/Professional.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/Professional.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
@@ -393,7 +397,7 @@
 														</dd>
 													</dl>
 													<div class="item item-rounded-lg bg-body-light">
-														<img t-attf-src="{{request.httprequest.host_url}}sts/static/src/img/personal.png" alt="sbac" />
+														<img t-attf-src="{{request.httprequest.host_url}}student_tracking_system/static/src/img/personal.png" alt="sbac" />
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
