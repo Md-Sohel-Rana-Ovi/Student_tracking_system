@@ -18,7 +18,7 @@
 					<hr/>
 					<div class="container">
 						<section class="cardd-section">
-							<div class="row pt-5">
+							<div class="row pt-2">
 								<div class="col-md-12 cardd-part-two">
 									<t t-if="student_info">
 										<div class="row">
@@ -286,13 +286,25 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action">
+												    <!-- t-attf-href="/personal/info?student_id=#{student_info['studentId']}" -->
+													<t t-if="student_info">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action?student_id=#{student_info['studentId']}">
 														<span>
 															View Disciplinary Action
 														</span>
 														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
 														</i>
 													</a>
+													</t>
+													<t t-else="">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action">
+															<span>
+																View Disciplinary Action
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+															</i>
+														</a>
+													</t>
 												</div>
 											</div>
 										</div>

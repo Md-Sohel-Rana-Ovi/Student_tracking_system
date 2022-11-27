@@ -135,9 +135,33 @@ class StsStudentInfo(http.Controller):
 
     @http.route('/disciplinary/action', auth='public', website=True)
     def disciplinary_action(self, **kw):
+         # print(kw)
+        student_info = None
+        if kw.get('student_id',False):
+            student_info = self.get_student_info(kw['student_id'])
+            
 
 
-        return request.render('student_tracking_system.student_disciplinary_action_template', {}) 
+    
+        return request.render('student_tracking_system.student_disciplinary_action_template', {
+            "student_info":student_info
+        }) 
+
+    def get_student_info(self, student_id):
+        try:
+            url = "http:/rana:8013/student/discipline/status/" + str(student_id)
+            headers = {
+                "Content-Type": "application/json",
+                
+            }
+            response = requests.get(url=url, headers=headers)
+            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+                data = response.json()
+                return data
+            return None
+        except:
+            return None      
+
 
     @http.route('/hall/info', auth='public', website=True)
     def hall_info(self, **kw):
