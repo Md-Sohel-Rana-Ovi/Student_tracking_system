@@ -108,10 +108,40 @@ class StsStudentInfo(http.Controller):
         academic_info
 
     @http.route('/registration_and_exam/clearence', auth='public', website=True)
-    def registration_and_exam_clearence(self, **kw):
+
+    def student_clearance(self, **kw):
+        # print(kw)
+        student_clearance = None
+        if kw.get('student_id',False):
+            student_clearance = self.get_student_clearance(kw['student_id'])
+            print("************")
+            print("************")
+            print("************")
+            print(student_clearance)
+            print(student_clearance)
+            
 
 
-        return request.render('student_tracking_system.student_registration_and_exam_clearence_template', {})
+        return request.render('student_tracking_system.student_registration_and_exam_clearence_template', {
+             "student_clearance":student_clearance
+        })
+
+
+    def get_student_clearance(self, student_id):
+        try:
+            url = "http://apps.diu.edu.bd:8043/rest/smis/v2/student-clearance/student/" + str(student_id)
+            headers = {
+                "Content-Type": "application/json",
+                "clientId": "6ea9ab1baa0efb9e19094440c317e21b",
+                "clientSecret": "bf222fb5-b155-50d5-b8c9-940df99dc580",
+            }
+            response = requests.get(url=url, headers=headers)
+            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+                data = response.json()
+                return data
+            return None
+        except:
+            return None       
 
     @http.route('/financial_and_ledger/info', auth='public', website=True)
     def financial_and_ledger_info(self, **kw):
@@ -136,31 +166,31 @@ class StsStudentInfo(http.Controller):
     @http.route('/disciplinary/action', auth='public', website=True)
     def disciplinary_action(self, **kw):
          # print(kw)
-        student_info = None
-        if kw.get('student_id',False):
-            student_info = self.get_student_info(kw['student_id'])
+        # student_info = None
+        # if kw.get('student_id',False):
+        #     student_info = self.get_student_info(kw['student_id'])
             
 
 
     
         return request.render('student_tracking_system.student_disciplinary_action_template', {
-            "student_info":student_info
+            # "student_info":student_info
         }) 
 
-    def get_student_info(self, student_id):
-        try:
-            url = "http:/rana:8013/student/discipline/status/" + str(student_id)
-            headers = {
-                "Content-Type": "application/json",
+    # def get_student_info(self, student_id):
+    #     try:
+    #         url = "http:/rana:8013/student/discipline/status/" + str(student_id)
+    #         headers = {
+    #             "Content-Type": "application/json",
                 
-            }
-            response = requests.get(url=url, headers=headers)
-            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
-                data = response.json()
-                return data
-            return None
-        except:
-            return None      
+    #         }
+    #         response = requests.get(url=url, headers=headers)
+    #         if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+    #             data = response.json()
+    #             return data
+    #         return None
+    #     except:
+    #         return None      
 
 
     @http.route('/hall/info', auth='public', website=True)
