@@ -30,13 +30,19 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="40%">
-													Semester
+												<th width="20%">
+													SemesterId
 												</th>
-												<th width="30%">
+												<th width="20%">
+													Semester Name
+												</th>
+												<th width="20%">
+													Reg Clearance
+												</th>
+												<th width="20%">
 													Mid Clearence
 												</th>
-												<th width="30%">
+												<th width="20%">
 													Final Clearence
 												</th>
 											</tr>
@@ -44,17 +50,21 @@
 										
 										<tbody>
 										<tr>
-										<td>
-										<p>12th Semester</p>
-										<!-- <t t-esc="professional.name"/> -->
-										</td>
-										<td>
-										<p>Yes</p>
-										</td>
-										<td>
-										<p>Yes</p>
-										<!-- <t t-esc="professional.work_start_date"/> -->
-										</td>	
+											<td>
+												<t t-if="student_clearance" t-esc="student_clearance[0]['semesterId']"/>
+											</td>
+											<td>
+												<t t-if="student_clearance" t-esc="student_clearance[0]['semesterName']"/>
+											</td>
+											<td>
+												<t t-if="student_clearance" t-esc="student_clearance[0]['regClearance']"/>
+											</td>
+											<td>
+												<t t-if="student_clearance" t-esc="student_clearance[0]['midClearance']"/>
+											</td>
+											<td>
+												<t t-if="student_clearance" t-esc="student_clearance[0]['finalClearance']"/>
+											</td>			
 										</tr>
 										</tbody>
 										

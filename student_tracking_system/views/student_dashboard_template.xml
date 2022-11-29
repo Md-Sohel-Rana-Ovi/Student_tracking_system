@@ -171,13 +171,25 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/registration_and_exam/clearence">
-														<span>
-															View Registration and Exam Clearence
-														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
-													</a>
+                                                     <t t-if="student_info"> 
+													   <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+															</i>
+														</a>
+													 </t> 
+
+                                                    <t t-else="">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+															</i>
+														</a>
+													 </t> 
 												</div>
 											</div>
 										</div>
@@ -286,9 +298,8 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-												    <!-- t-attf-href="/personal/info?student_id=#{student_info['studentId']}" -->
 													<!-- <t t-if="student_info">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action?student_id=#{student_info['studentId']}">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/disciplinary/action?student_id=#{student_info['studentId']}">
 														<span>
 															View Disciplinary Action
 														</span>
@@ -326,13 +337,26 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/hall/info">
+												 <t t-if="student_info"> 
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
 														<span>
 															View Hall Info
 														</span>
 														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
 														</i>
 													</a>
+												</t> 
+                                                <t t-else="">
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info">
+														<span>
+															View Hall Info
+														</span>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
+														</i>
+												   </a>	
+
+												</t>
+
 												</div>
 											</div>
 										</div>

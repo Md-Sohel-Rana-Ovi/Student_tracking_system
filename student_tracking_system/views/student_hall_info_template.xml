@@ -30,30 +30,35 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="35%">
-													Semester
+												<th width="25%">
+													FirstName
 												</th>
-												<th width="30%">
-													Due
+												<th width="25%">
+													Payable
 												</th>
-												<th width="35%">
-													Activity
+												<th width="25%">
+													Paid
+												</th>
+												<th width="25%">
+													due
 												</th>
 											</tr>
 										</thead>
 										
 										<tbody>
 										<tr>
-										<td>
-										<p>12th Semester</p>
-										</td>
-										<td>
-										<p>00</p>
-										<!-- <t t-esc="professional.department"/> -->
-										</td>
-										<td>
-										<p>good</p>
-										</td>									
+											<td>
+												<t t-if="hall_info" t-esc="hall_info['firstName']"/>
+											</td>
+											<td>
+												<t t-if="hall_info" t-esc="hall_info['payable']"/>
+											</td>
+											<td>
+												<t t-if="hall_info" t-esc="hall_info['paid']"/>
+											</td>
+											<td>
+												<t t-if="hall_info" t-esc="hall_info['due']"/>
+											</td>									
 										</tr>									
 										</tbody>										
 									</table>
