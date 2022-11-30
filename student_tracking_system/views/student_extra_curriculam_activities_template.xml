@@ -30,41 +30,32 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="20%">
-													Achivement
+												<th width="50%">
+													Name
 												</th>
-												<th width="20%">
-													Award
-												</th>
-												<th width="20%">
-													Club
-												</th>
-												<th width="20%">
-													BNCC
-												</th>
-												<th width="20%">
-													Scout
+												<th width="50%">
+													Description
 												</th>
 											</tr>
 										</thead>
 										
 										<tbody>
 										<tr>
-										<td>
-										<p>Programming Contrast</p>
-										</td>
-										<td>
-										<p>Book published</p>
-										</td>
-										<td>
-										<p>Computing</p>
-										</td>
-										<td>
-										<p>No</p>
-										</td>
-										<td>
-										<p>No</p>
-										</td>									
+											<td>
+												<p>Achievement</p>
+											</td>
+											<td>
+												<p>As befits an organization coming off two straight NBA championships, the enlistees form a Who’s Who of modern basketball achievement.</p>
+											</td>
+											</tr>
+										<tr>
+										   <td>
+										      <p>Award</p>
+										   </td>
+
+										    <td>
+										      <p>His group then investigated whether the type of screen time made a difference in mental or physical health or in school award.</p>
+										   </td>
 										</tr>
 										</tbody>										
 									</table>

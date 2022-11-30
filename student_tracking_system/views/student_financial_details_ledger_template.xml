@@ -45,14 +45,14 @@
 										<tbody>
 										<tr>
 										<td>
-										<p>00</p>
+										<p>10000</p>
 										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>7000000</p>
+										<p>7000</p>
 										</td>
 										<td>
-										<p>00</p>
+										<p>3000</p>
 										</td>	
 										</tr>
 										</tbody>

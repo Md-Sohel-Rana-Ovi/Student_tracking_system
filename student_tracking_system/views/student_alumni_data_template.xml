@@ -32,14 +32,17 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="30%">
+												<th width="25%">
 													Status
 												</th>
-												<th width="35%">
+												<th width="25%">
 													Organization
 												</th>
-												<th width="35%">
+												<th width="25%">
 													Date
+												</th>
+												<th width="25%">
+													Description
 												</th>
 											</tr>
 										</thead>
@@ -47,17 +50,22 @@
 											<tr>
 												<td>
 													<p>
-														Yes
+														Alumni
 													</p>
 												</td>
 												<td>
 													<p>
-														DCL
+														Daffodil Computers Limited
 													</p>
 												</td>
 												<td>
 													<p>
-														06-11-22
+														06-11-18
+													</p>
+												</td>
+												<td>
+													<p>As a graduate, you become a part of the student alumni association for your university.
+														
 													</p>
 												</td>
 											</tr>

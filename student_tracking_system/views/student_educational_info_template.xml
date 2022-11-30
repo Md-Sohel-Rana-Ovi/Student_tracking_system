@@ -52,7 +52,7 @@
 										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>Abc High School</p>
+										<p>Kishoreganj Govt. High School and Colleage</p>
 										<!-- <t t-esc="professional.department"/> -->
 										</td>
 										<td>
@@ -70,7 +70,7 @@
 										<!-- <t t-esc="professional.name"/> -->
 										</td>
 										<td>
-										<p>Abc High Collage</p>
+										<p>Kishoreganj Govt. School and Collage</p>
 										<!-- <t t-esc="professional.department"/> -->
 										</td>
 										<td>
