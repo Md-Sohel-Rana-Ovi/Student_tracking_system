@@ -224,9 +224,31 @@ class StsStudentInfo(http.Controller):
 
     @http.route('/laptop/info', auth='public', website=True)
     def laptop_info(self, **kw):
+        laptop_info = None
+        if kw.get('student_id',False):
+            laptop_info = self.get_student_laptop_info(kw['student_id'])
 
 
-        return request.render('student_tracking_system.student_laptop_info_template', {}) 
+        return request.render('student_tracking_system.student_laptop_info_template', {
+            "laptop_info":laptop_info
+        }) 
+
+    def get_student_laptop_info(self, student_id):
+        try:
+            url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status?student_id={}".format(student_id)
+            headers = {"Authorization": "Bearer KcMPJ1yGpnULwNPh58l44pjoItC2Ro"}
+            # headers = {
+            #     "Content-Type": "application/json",
+            #     "clientId": "6ea9ab1baa0efb9e19094440c317e21b",
+            #     "clientSecret": "bf222fb5-b155-50d5-b8c9-940df99dc580",
+            # }
+            
+            response = requests.get(url=url, headers=headers)
+            if response.status_code == 200:
+                return response.json()
+            return None
+        except:
+            return None          
    
     @http.route('/mentoring/system', auth='public', website=True)
     def mentoring_system(self, **kw):
