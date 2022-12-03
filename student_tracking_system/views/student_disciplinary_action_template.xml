@@ -41,22 +41,22 @@
 												</th>
 											</tr>
 										</thead>
-										
+
 										<tbody>
-										<tr>
-										<td>
-										<p>12th Semester</p>
-										<!-- <t t-esc="professional.name"/> -->
-										</td>
-										<td>
-										<p>verbal warning</p>
-										</td>
-										<td>
-										<p>A disciplinary action is a reprimand or corrective action in response to Student misconduct, rule violation, or poor performance.</p>
-										</td>									
-										</tr>
+											<tr>
+												<td>
+													<p>12th Semester</p>
+													<!-- <t t-esc="professional.name"/> -->
+												</td>
+												<td>
+													<p>verbal warning</p>
+												</td>
+												<td>
+													<p>A disciplinary action is a reprimand or corrective action in response to Student misconduct, rule violation, or poor performance.</p>
+												</td>
+											</tr>
 										</tbody>
-										
+
 									</table>
 								</div>
 							</div>

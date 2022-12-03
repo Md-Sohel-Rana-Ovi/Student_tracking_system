@@ -44,46 +44,46 @@
 												</th>
 											</tr>
 										</thead>
-										
+
 										<tbody>
-										<tr>
-										<td>
-										<p>SSC</p>
-										<!-- <t t-esc="professional.name"/> -->
-										</td>
-										<td>
-										<p>Kishoreganj Govt. High School and Colleage</p>
-										<!-- <t t-esc="professional.department"/> -->
-										</td>
-										<td>
-										<p>2010</p>
-										<!-- <t t-esc="professional.designation"/> -->
-										</td>
-										<td>
-										<p>4.5</p>
-										<!-- <t t-esc="professional.work_start_date"/> -->
-										</td>	
-										</tr>
-										<tr>
-										<td>
-										<p>HSC</p>
-										<!-- <t t-esc="professional.name"/> -->
-										</td>
-										<td>
-										<p>Kishoreganj Govt. School and Collage</p>
-										<!-- <t t-esc="professional.department"/> -->
-										</td>
-										<td>
-										<p>2012</p>
-										<!-- <t t-esc="professional.designation"/> -->
-										</td>
-										<td>
-										<p>4.81</p>
-										<!-- <t t-esc="professional.work_start_date"/> -->
-										</td>	
-										</tr>
+											<tr>
+												<td>
+													<p>SSC</p>
+													<!-- <t t-esc="professional.name"/> -->
+												</td>
+												<td>
+													<p>Kishoreganj Govt. High School and Colleage</p>
+													<!-- <t t-esc="professional.department"/> -->
+												</td>
+												<td>
+													<p>2010</p>
+													<!-- <t t-esc="professional.designation"/> -->
+												</td>
+												<td>
+													<p>4.5</p>
+													<!-- <t t-esc="professional.work_start_date"/> -->
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<p>HSC</p>
+													<!-- <t t-esc="professional.name"/> -->
+												</td>
+												<td>
+													<p>Kishoreganj Govt. School and Collage</p>
+													<!-- <t t-esc="professional.department"/> -->
+												</td>
+												<td>
+													<p>2012</p>
+													<!-- <t t-esc="professional.designation"/> -->
+												</td>
+												<td>
+													<p>4.81</p>
+													<!-- <t t-esc="professional.work_start_date"/> -->
+												</td>
+											</tr>
 										</tbody>
-										
+
 									</table>
 								</div>
 							</div>

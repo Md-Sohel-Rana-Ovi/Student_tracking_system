@@ -44,23 +44,23 @@
 												</th>
 											</tr>
 										</thead>
-										
+
 										<tbody>
-										<tr>
-											<td>
-												<t t-if="hall_info" t-esc="hall_info['firstName']"/>
-											</td>
-											<td>
-												<t t-if="hall_info" t-esc="hall_info['payable']"/>
-											</td>
-											<td>
-												<t t-if="hall_info" t-esc="hall_info['paid']"/>
-											</td>
-											<td>
-												<t t-if="hall_info" t-esc="hall_info['due']"/>
-											</td>									
-										</tr>									
-										</tbody>										
+											<tr>
+												<td>
+													<t t-if="hall_info" t-esc="hall_info['firstName']" />
+												</td>
+												<td>
+													<t t-if="hall_info" t-esc="hall_info['payable']" />
+												</td>
+												<td>
+													<t t-if="hall_info" t-esc="hall_info['paid']" />
+												</td>
+												<td>
+													<t t-if="hall_info" t-esc="hall_info['due']" />
+												</td>
+											</tr>
+										</tbody>
 									</table>
 								</div>
 							</div>

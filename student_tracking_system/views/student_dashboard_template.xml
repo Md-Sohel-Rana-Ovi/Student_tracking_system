@@ -15,7 +15,7 @@
 							</div>
 						</div>
 					</div>
-					<hr/>
+					<hr />
 					<div class="container">
 						<section class="cardd-section">
 							<div class="row pt-2">
@@ -78,8 +78,7 @@
 															<span>
 																View Personal Info
 															</span>
-															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-															</i>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 														</a>
 													</t>
 													<t t-else="">
@@ -87,8 +86,7 @@
 															<span>
 																View Personal Info
 															</span>
-															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-															</i>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 														</a>
 													</t>
 												</div>
@@ -116,8 +114,7 @@
 														<span>
 															View Education Info
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -144,8 +141,7 @@
 														<span>
 															View Academic Details at Diu
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -171,25 +167,23 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-                                                     <t t-if="student_info"> 
-													   <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
+													<t t-if="student_info">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
 															<span>
 																View Registration and Exam Clearence
 															</span>
-															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-															</i>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 														</a>
-													 </t> 
+													</t>
 
-                                                    <t t-else="">
+													<t t-else="">
 														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence">
 															<span>
 																View Registration and Exam Clearence
 															</span>
-															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-															</i>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 														</a>
-													 </t> 
+													</t>
 												</div>
 											</div>
 										</div>
@@ -215,8 +209,7 @@
 														<span>
 															View Financial Details/Ledger
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -243,8 +236,7 @@
 														<span>
 															View Waiver and Scholarship
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -274,8 +266,7 @@
 														<span>
 															View Extra Curriculam Activities
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -308,13 +299,12 @@
 													</a>
 													</t>
 													<t t-else=""> -->
-														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action">
-															<span>
+													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/disciplinary/action">
+														<span>
 																View Disciplinary Action
 															</span>
-															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-															</i>
-														</a>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+													</a>
 													<!-- </t> -->
 												</div>
 											</div>
@@ -337,25 +327,23 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-												 <t t-if="student_info"> 
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
-														<span>
+													<t t-if="student_info">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
+															<span>
 															View Hall Info
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
-													</a>
-												</t> 
-                                                <t t-else="">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info">
-														<span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
+													</t>
+													<t t-else="">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info">
+															<span>
 															View Hall Info
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
-												   </a>	
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
 
-												</t>
+													</t>
 
 												</div>
 											</div>
@@ -385,8 +373,7 @@
 														<span>
 															View Laptop Info
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -413,8 +400,7 @@
 														<span>
 															View Mentoring System
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>
@@ -441,8 +427,7 @@
 														<span>
 															View Alumni Data
 														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;">
-														</i>
+														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 													</a>
 												</div>
 											</div>

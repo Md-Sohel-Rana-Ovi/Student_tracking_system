@@ -51,34 +51,34 @@
 												<th width="10%">
 													Nationality
 												</th>
-										
+
 											</tr>
 										</thead>
-										
+
 										<tbody>
-										<tr>
-										<td>
-										<t t-if="student_info" t-esc="student_info['studentName']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['fatherName']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['presentAddress']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['permanentAddress']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['email']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['mobile']"/>
-										</td>
-										<td>
-										<t t-if="student_info" t-esc="student_info['nationality']"/>
-										</td>
-										</tr>
+											<tr>
+												<td>
+													<t t-if="student_info" t-esc="student_info['studentName']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['fatherName']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['presentAddress']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['permanentAddress']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['email']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['mobile']" />
+												</td>
+												<td>
+													<t t-if="student_info" t-esc="student_info['nationality']" />
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>

@@ -47,27 +47,27 @@
 												</th>
 											</tr>
 										</thead>
-										
+
 										<tbody>
-										<tr>
-											<td>
-												<t t-if="student_clearance" t-esc="student_clearance[0]['semesterId']"/>
-											</td>
-											<td>
-												<t t-if="student_clearance" t-esc="student_clearance[0]['semesterName']"/>
-											</td>
-											<td>
-												<t t-if="student_clearance" t-esc="student_clearance[0]['regClearance']"/>
-											</td>
-											<td>
-												<t t-if="student_clearance" t-esc="student_clearance[0]['midClearance']"/>
-											</td>
-											<td>
-												<t t-if="student_clearance" t-esc="student_clearance[0]['finalClearance']"/>
-											</td>			
-										</tr>
+											<tr>
+												<td>
+													<t t-if="student_clearance" t-esc="student_clearance[0]['semesterId']" />
+												</td>
+												<td>
+													<t t-if="student_clearance" t-esc="student_clearance[0]['semesterName']" />
+												</td>
+												<td>
+													<t t-if="student_clearance" t-esc="student_clearance[0]['regClearance']" />
+												</td>
+												<td>
+													<t t-if="student_clearance" t-esc="student_clearance[0]['midClearance']" />
+												</td>
+												<td>
+													<t t-if="student_clearance" t-esc="student_clearance[0]['finalClearance']" />
+												</td>
+											</tr>
 										</tbody>
-										
+
 									</table>
 								</div>
 							</div>
