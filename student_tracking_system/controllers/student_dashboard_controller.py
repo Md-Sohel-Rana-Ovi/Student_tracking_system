@@ -4,6 +4,15 @@ from odoo.http import request, Response
 import json
 import logging
 import requests
+from odoo import _, fields, http, release
+from odoo.http import request, Response
+from odoo.models import check_method_name
+from odoo.tools.image import image_data_uri
+from odoo.tools import misc, config
+
+from odoo.addons.muk_rest import validators, tools
+from odoo.addons.muk_rest.tools.common import parse_value
+from odoo.addons.muk_utils.tools.json import ResponseEncoder, RecordEncoder
 
 _logger = logging.getLogger(__name__)
 
@@ -42,14 +51,7 @@ class StsStudentInfo(http.Controller):
         print(kw)
         student_info = None
         if kw.get('student_id', False):
-            student_info = self.get_student_info(kw['student_id'])
-            print("**********")
-            print("**********")
-            print("**********")
-            print("**********")
-            print(student_info)
-            print(student_info)
-            print(student_info)
+            student_info = self.get_student_info(kw['student_id']) 
 
         return request.render('student_tracking_system.student_personal_info_template', {
             "student_info": student_info
@@ -205,6 +207,9 @@ class StsStudentInfo(http.Controller):
         laptop_info = None
         if kw.get('student_id', False):
             laptop_info = self.get_student_laptop_info(kw['student_id'])
+            print(laptop_info)
+            print(laptop_info)
+            print(laptop_info)
 
         return request.render('student_tracking_system.student_laptop_info_template', {
             "laptop_info": laptop_info
@@ -212,21 +217,51 @@ class StsStudentInfo(http.Controller):
 
     def get_student_laptop_info(self, student_id):
         try:
-            url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status?student_id={}".format(
-                student_id)
-            headers = {"Authorization": "Bearer KcMPJ1yGpnULwNPh58l44pjoItC2Ro"}
+            ## Get access Token
+            print("===================")
+            token = self.get_access_token()
+            print(token)
+            
+            url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status?student_id={}".format(student_id)
+            headers = {
+                "Authorization": "Bearer KcMPJ1yGpnULwNPh58l44pjoItC2Ro"
+            }
             # headers = {
             #     "Content-Type": "application/json",
             #     "clientId": "6ea9ab1baa0efb9e19094440c317e21b",
             #     "clientSecret": "bf222fb5-b155-50d5-b8c9-940df99dc580",
             # }
-
-            response = requests.get(url=url, headers=headers)
+            token_url ="https://pd.daffodilvarsity.edu.bd/api/authentication/oauth2/token"
+            client_id = "5A5RZahzru8XbzWuaUysc5kKRe5uLL"
+            client_secret ="8n0KSrgFdLsFfZAwUQnU4PJ3tltBTy"
+            # get_access_token("https://pd.daffodilvarsity.edu.bd/api/authentication/oauth2/token", "abcde", "12345")
+            response = requests.get(
+                token_url,
+                url,
+                data={"grant_type": "client_credentials"},
+                auth=(client_id, client_secret),
+                )
+            print("***************")
+            print("***************")
+            print(response)
+            print(response.status_code)
+            # response = requests.get(url=url, headers=headers)
             if response.status_code == 200:
                 return response.json()
             return None
         except:
             return None
+
+    def get_access_token(self):
+        token_url ="https://pd.daffodilvarsity.edu.bd/api/authentication/oauth2/token"
+        client_id = "5A5RZahzru8XbzWuaUysc5kKRe5uLL"
+        client_secret ="8n0KSrgFdLsFfZAwUQnU4PJ3tltBTy"
+        response = requests.get(
+            token_url,
+            data={"grant_type": "client_credentials"},
+            auth=(client_id, client_secret),
+        )
+        return response
 
     @http.route('/mentoring/system', auth='public', website=True)
     def mentoring_system(self, **kw):
