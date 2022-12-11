@@ -10,9 +10,9 @@ from odoo.models import check_method_name
 from odoo.tools.image import image_data_uri
 from odoo.tools import misc, config
 
-from odoo.addons.muk_rest import validators, tools
-from odoo.addons.muk_rest.tools.common import parse_value
-from odoo.addons.muk_utils.tools.json import ResponseEncoder, RecordEncoder
+# from odoo.addons.muk_rest import validators, tools
+# from odoo.addons.muk_rest.tools.common import parse_value
+# from odoo.addons.muk_utils.tools.json import ResponseEncoder, RecordEncoder
 
 _logger = logging.getLogger(__name__)
 
@@ -116,8 +116,7 @@ class StsStudentInfo(http.Controller):
 
     def get_student_clearance(self, student_id):
         try:
-            url = "http://apps.diu.edu.bd:8043/rest/smis/v2/student-clearance/student/" + \
-                str(student_id)
+            url = "http://apps.diu.edu.bd:8043/rest/smis/v2/student-clearance/student/" + str(student_id)
             headers = {
                 "Content-Type": "application/json",
                 "clientId": "6ea9ab1baa0efb9e19094440c317e21b",
@@ -223,9 +222,9 @@ class StsStudentInfo(http.Controller):
             print(token)
             
             url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status?student_id={}".format(student_id)
-            headers = {
-                "Authorization": "Bearer KcMPJ1yGpnULwNPh58l44pjoItC2Ro"
-            }
+            # headers = {
+            #     "Authorization": "Bearer KcMPJ1yGpnULwNPh58l44pjoItC2Ro"
+            # }
             # headers = {
             #     "Content-Type": "application/json",
             #     "clientId": "6ea9ab1baa0efb9e19094440c317e21b",
