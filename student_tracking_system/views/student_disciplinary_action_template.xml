@@ -30,31 +30,27 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="35%">
-													Semester
+												<th width="50%">
+													Misbehaviour Category
 												</th>
-												<th width="30%">
-													Issue
-												</th>
-												<th width="35%">
-													Decision
+												<th width="50%">
+													Misbehaviour Type
 												</th>
 											</tr>
 										</thead>
 
 										<tbody>
+											<!-- <t t-foreach="disciplinary_info[discipline_id][0]"
+											t-as="discipline">
 											<tr>
 												<td>
-													<p>12th Semester</p>
-													<!-- <t t-esc="professional.name"/> -->
+													<t t-if="discipline" t-esc="discipline['misbehaviour_category_id']" />
 												</td>
 												<td>
-													<p>verbal warning</p>
-												</td>
-												<td>
-													<p>A disciplinary action is a reprimand or corrective action in response to Student misconduct, rule violation, or poor performance.</p>
+													<t t-if="discipline" t-esc="discipline['misbehaviour_type']" />
 												</td>
 											</tr>
+										</t> -->
 										</tbody>
 
 									</table>
