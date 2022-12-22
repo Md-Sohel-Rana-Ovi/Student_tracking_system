@@ -142,55 +142,64 @@ class StsStudentInfo(http.Controller):
 
     @http.route('/extra_curriculam/activity', auth='public', website=True)
     def extra_curriculam_activity(self, **kw):
+        print(kw)
+        extra_curriculam = None
+        if kw.get('student_id',False):
+            extra_curriculam = self.get_student_extra_curriculum_info(kw['student_id'])
 
-        return request.render('student_tracking_system.student_extra_curriculam_activity_template', {})
+        return request.render('student_tracking_system.student_extra_curriculam_activity_template', {
+            "extra_curriculam": extra_curriculam
+        })
+
+    def get_student_extra_curriculum_info(self, student_id):
+        try:
+            url = "https://pd.daffodilvarsity.edu.bd/student/curriculumn/status" 
+            params = {
+                "response_type": "token",
+                "client_id": "5A5RZahzru8XbzWuaUysc5kKRe5uLL",
+                "redirect_uri": "https://pd.daffodilvarsity.edu.bd/",
+                "student_id": student_id,
+                "Accept" : "*/*"
+            }
+            
+            response = requests.get(url=url, params=params)
+            print("======================================================")
+            print(response.content)
+            print(type(response))
+            if response.status_code == 200:
+                return response.json()
+            return None
+        except:
+            return None
 
     @http.route('/disciplinary/action', auth='public', website=True)
     def disciplinary_action(self, **kw):
         print(kw)
         disciplinary_info = None
         if kw.get('student_id',False):
-            disciplinary_info = self.get_student_info(kw['student_id'])
-
-            print("************")
-            print("************")
-            print("************")
-            print(disciplinary_info)
-            print(disciplinary_info)
-            print(disciplinary_info)
+            disciplinary_info = self.get_student_disciplin_info(kw['student_id'])  
 
         return request.render('student_tracking_system.student_disciplinary_action_template', {
             "disciplinary_info":disciplinary_info
         })
 
-    def get_student_info(self, student_id):
+    def get_student_disciplin_info(self, student_id):
         try:
-            url = "http://192.168.10.56:8013/student/discipline/status" + str(student_id)
-            headers = {
-                # "Content-Type": "application/json",
+            url = "https://pd.daffodilvarsity.edu.bd/student/discipline/status" 
+            params = {
                 "response_type": "token",
-                "client_id": "Hucg1vCTF3A4AINWPJKzHlDtFFhfuh",
-                "redirect_uri": "http://192.168.10.56:8013/",
-                "student_id": "student_id",
-
+                "client_id": "5A5RZahzru8XbzWuaUysc5kKRe5uLL",
+                "redirect_uri": "https://pd.daffodilvarsity.edu.bd/",
+                "student_id": student_id,
+                "Accept" : "*/*"
             }
-            # response_type = "token",
-            # client_id = "Hucg1vCTF3A4AINWPJKzHlDtFFhfuh",
-            # client_secret= "2IHzm8wBtnedsyJ2vmAU36qK7yE7Jt"
-            # redirect_uri = "http://192.168.10.56:8013/",
-            # student_id= "student_id",
-            # response = requests.get(
-            #     url=url,
-            #     response_type =response_type,
-            #     client_id = client_id,
-            #     redirect_uri = redirect_uri,
-            #     student_id= student_id
-            #     )
-
-            response = requests.get(url=url, headers=headers)
-            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
-                data = response.json()
-                return data
+            
+            response = requests.get(url=url, params=params)
+            print("======================================================")
+            print(response.content)
+            print(type(response))
+            if response.status_code == 200:
+                return response.json()
             return None
         except:
             return None
@@ -200,14 +209,7 @@ class StsStudentInfo(http.Controller):
         hall_info = None
         if kw.get('student_id', False):
             hall_info = self.get_student_hall_info(kw['student_id'])
-            print("**************")
-            print("**************")
-            print("**************")
-            print("**************")
-            print(hall_info)
-            print(hall_info)
-            print(hall_info)
-
+          
         return request.render('student_tracking_system.student_hall_info_template', {
             "hall_info": hall_info
         })
@@ -234,10 +236,7 @@ class StsStudentInfo(http.Controller):
         laptop_info = None
         if kw.get('student_id', False):
             laptop_info = self.get_student_laptop_info(kw['student_id'])
-            print(laptop_info)
-            print(laptop_info)
-            print(laptop_info)
-
+           
         return request.render('student_tracking_system.student_laptop_info_template', {
             "laptop_info": laptop_info
         })
@@ -245,32 +244,19 @@ class StsStudentInfo(http.Controller):
     def get_student_laptop_info(self, student_id):
         try:
               
-            url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status?student_id={}".format(student_id)
-
-            headers = {
-                # "Content-Type": "application/json",
+            url = "https://pd.daffodilvarsity.edu.bd/student/laptop/status"
+            params = {
                 "response_type": "token",
-                "clientId": "5A5RZahzru8XbzWuaUysc5kKRe5uLL",
+                "client_id": "5A5RZahzru8XbzWuaUysc5kKRe5uLL",
                 "redirect_uri": "https://pd.daffodilvarsity.edu.bd/",
-                "student_id": "student_id",
+                "student_id": student_id,
+                "Accept" : "*/*"
             }
-            # response_type ="token"
-            # client_id = "5A5RZahzru8XbzWuaUysc5kKRe5uLL"
-            # redirect_uri = "https://pd.daffodilvarsity.edu.bd/"
-            # student_id = "student_id"
-            # client_secret ="8n0KSrgFdLsFfZAwUQnU4PJ3tltBTy"
-            # response = requests.get(
-            #     response_type,
-            #     url,
-            #     client_id,
-            #     redirect_uri,
-            #     student_id
-            #     )
-            # print("***************")
-            # print("***************")
-            # print(response)
-            # print(response.status_code)
-            response = requests.get(url=url, headers=headers)
+            
+            response = requests.get(url=url, params=params)
+            print("======================================================")
+            print(response.content)
+            print(type(response))
             if response.status_code == 200:
                 return response.json()
             return None
