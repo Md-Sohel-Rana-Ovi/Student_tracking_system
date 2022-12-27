@@ -39,6 +39,7 @@
         'views/student_laptop_info_template.xml', 
         'views/student_mentoring_system_template.xml', 
         'views/student_alumni_data_template.xml', 
+        'views/nabver_template.xml',  
         'views/student_search_template.xml', 
        
                 

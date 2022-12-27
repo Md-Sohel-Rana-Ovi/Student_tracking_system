@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/student_tracking_system/static/src/css/dashboard_min.css" />
         <link rel="stylesheet" href="/student_tracking_system/static/src/css/student_portal.css" />
         <link rel="stylesheet" href="/student_tracking_system/static/src/css/dashboard.css" />
+        <link rel="stylesheet" href="/student_tracking_system/static/src/css/navber.css" />
         <script src="/student_tracking_system/static/src/js/dashboard.js"></script>
       </xpath>
     </template>

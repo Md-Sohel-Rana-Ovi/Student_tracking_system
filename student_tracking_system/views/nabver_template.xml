@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- custom header -->
+        <template id="student_tracking_system.replace_header4" inherit_id="website.layout" name="Header4">
+            <xpath expr="//header" position="replace">
+                <section id="student_tracking_system_custom_header">
+                    <header>
+                        <!-- <div class="logo">
+                            <a href="/">
+                                <img src="https://2brogamers.com/two_brogamers/static/photo/logoo.png" alt="2BroGamers" />
+                            </a>
+                        </div> -->
+                        <nav class="nav" id="nav-menu">
+                            <h4 class="header_close head_close" id="close-menu">
+                                <i class="fa fa-times"></i>
+                            </h4>
+                            <ul class="nav_list">
+                                    <li class="nav_item">
+                                        <a href="/web/login" class="nav_link">
+                                            <i style="color:red" class="fa fa-user"></i>
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li class="nav_item">
+                                        <a href="/web/signup" class="nav_link">
+                                            <i style="color:green" class="fa fa-edit"></i>
+                                            Registration
+                                        </a>
+                                    </li>
+                                   
+                                <li class="nav_item contactus">Contact Us</li>
+                                <div class="social">
+                                    <a href="https://www.facebook.com/2BroGameshop.bd/" target="_blank" class="nav_link fa">
+                                        <i style="color:#28589c;font-size:25px" class="fa fa-facebook-official"></i>
+                                    </a>
+                                    <a href="https://youtube.com/c/2brogamersofficial" target="_blank" class="nav_link yo">
+                                        <i style="color:red;font-size:25px" class="fa fa-youtube"></i>
+                                    </a>
+                                    <a href="https://api.whatsapp.com/send/?phone=%2B8801796407319&amp;text&amp;app_absent=0" target="_blank" class="nav_link wh">
+                                        <i style="color:#25D366;font-size:25px" class="fa fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </ul>
+                        </nav>
+                        <h4 class="header_toggle " id="toggle-menu">
+                            <i class="fa fa-align-justify"></i>
+                        </h4>
+                    </header>
+                    <script>
+                        const navmenu = document.getElementById('nav-menu'),
+                        togglemenu = document.getElementById('toggle-menu'),
+                        closemenu = document.getElementById('close-menu')
+                    
+                        togglemenu.addEventListener('click', () => {
+                            navmenu.classList.toggle('show')
+                        });
+                        closemenu.addEventListener('click', () => {
+                            navmenu.classList.remove('show')
+                        });
+                    </script>
+                </section>
+            </xpath>
+        </template>
+    </data>
+</odoo>

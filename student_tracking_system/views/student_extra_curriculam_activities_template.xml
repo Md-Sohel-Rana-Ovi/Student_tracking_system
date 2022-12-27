@@ -31,7 +31,7 @@
 										<thead>
 											<tr>
 												<th width="50%">
-													Name
+													Activity
 												</th>
 												<th width="50%">
 													Description
@@ -40,23 +40,17 @@
 										</thead>
 
 										<tbody>
+											<t t-foreach="extra_curriculam['activity_id']"
+											t-as="extra_activity">
 											<tr>
 												<td>
-													<p>Achievement</p>
+													<t t-if="extra_activity" t-esc="extra_activity['activity']" />
 												</td>
 												<td>
-													<p>As befits an organization coming off two straight NBA championships, the enlistees form a Who’s Who of modern basketball achievement.</p>
+													<t t-if="extra_activity" t-esc="extra_activity['description']" />
 												</td>
 											</tr>
-											<tr>
-												<td>
-													<p>Award</p>
-												</td>
-
-												<td>
-													<p>His group then investigated whether the type of screen time made a difference in mental or physical health or in school award.</p>
-												</td>
-											</tr>
+										</t>
 										</tbody>
 									</table>
 								</div>

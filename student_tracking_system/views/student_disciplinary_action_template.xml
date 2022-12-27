@@ -40,7 +40,7 @@
 										</thead>
 
 										<tbody>
-											<!-- <t t-foreach="disciplinary_info[discipline_id][0]"
+											<t t-foreach="disciplinary_info['discipline_id']"
 											t-as="discipline">
 											<tr>
 												<td>
@@ -50,7 +50,7 @@
 													<t t-if="discipline" t-esc="discipline['misbehaviour_type']" />
 												</td>
 											</tr>
-										</t> -->
+										</t>
 										</tbody>
 
 									</table>
