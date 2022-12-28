@@ -43,7 +43,7 @@
                                 </div>
                             </ul>
                         </nav>
-                        <h4 class="header_toggle " id="toggle-menu">
+                        <h4 style="margin-left:-1350px! important" class="header_toggle " id="toggle-menu">
                             <i class="fa fa-align-justify"></i>
                         </h4>
                     </header>
