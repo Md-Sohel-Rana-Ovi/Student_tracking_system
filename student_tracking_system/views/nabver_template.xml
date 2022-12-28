@@ -16,6 +16,29 @@
                                 <i class="fa fa-times"></i>
                             </h4>
                             <ul class="nav_list">
+                                <li class="nav_item">
+                                    <t t-if="student_info">
+                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/dashboard?student_id=#{student_info['studentId']}">
+                                            <span>
+                                                Back to Dashboard
+                                            </span>
+                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+                                        </a>
+                                    </t>
+                                    <t t-else="">
+                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/dashboard">
+                                            <span>
+                                                Back to Dashboard
+                                            </span>
+                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+                                        </a>
+                                    </t>
+                                </li>
+
+
+
+
+
                                     <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
@@ -184,8 +207,9 @@
                                    
                             </ul>
                         </nav>
-                        <h4 style="margin-left:-1250px! important" class="header_toggle " id="toggle-menu">
+                        <h4 style="margin-left:-1250px! important" class="header_toggle pt-2" id="toggle-menu">
                             <i class="fa fa-align-justify"></i>
+                            <!-- <i class="fa-regular fa-bars"></i> -->
                         </h4>
                     </header>
                     <script>

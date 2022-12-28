@@ -56,17 +56,17 @@ header .logo img{
 }
 
 
-/* @media screen and (max-width:992px){
+ /* @media screen and (max-width:992px){
   header{
     margin-top:10px;
     height:48px;
     justify-content: space-between;
     padding:0 28px;
 
-  } */
+  }  */
   .header_toggle{
     display:inline;
-    color:rgb(73, 19, 19);
+    color:rgb(27, 21, 21);
     text-align:left;
     font-size:20px;
     cursor:pointer;
@@ -75,10 +75,10 @@ header .logo img{
     position: absolute;
     right:15px;
     display:block;
-    font-size:27px;
+    font-size:20px;
     border-radius:50%;
-    color:red;
-    font-weight: 600;
+    color:rgb(77, 28, 28);
+    font-weight: 400;
     cursor:pointer;
   }
   .head_close{
@@ -127,10 +127,10 @@ header .logo img{
 
 .nav_item{
    
-  padding:15px 0;
+  padding:5px 0;
 
 }
 .Scroll {
-    height:600px;
+    height:100%;
     overflow-y: scroll;
   }
