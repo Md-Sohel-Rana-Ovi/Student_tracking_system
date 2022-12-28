@@ -130,3 +130,7 @@ header .logo img{
   padding:15px 0;
 
 }
+.Scroll {
+    height:600px;
+    overflow-y: scroll;
+  }
