@@ -49,7 +49,15 @@
 										</thead>
 
 										<tbody>
+											<div class="invisible">
+												<t t-if="student_clearance" t-esc="student_clearance[0]['studentId']" />
+											</div>
+										
 											<tr>
+												<!-- <td class="invisible">
+													<t t-if="student_clearance" t-esc="student_clearance[0]['studentId']" />
+												</td> -->
+											
 												<td>
 													<t t-if="student_clearance" t-esc="student_clearance[0]['semesterId']" />
 												</td>

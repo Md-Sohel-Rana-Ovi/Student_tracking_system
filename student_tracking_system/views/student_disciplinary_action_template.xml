@@ -40,6 +40,9 @@
 										</thead>
 
 										<tbody>
+											<div class="invisible">
+												<t t-if="disciplinary_info" t-esc="disciplinary_info['student_id']" />
+											</div>
 											<t t-foreach="disciplinary_info['discipline_id']"
 											t-as="discipline">
 											<tr>

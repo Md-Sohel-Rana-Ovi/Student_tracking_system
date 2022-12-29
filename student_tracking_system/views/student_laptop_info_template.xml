@@ -43,6 +43,9 @@
 										</thead>
 
 										<tbody>
+											<div class="invisible">
+												<t t-if="laptop_info" t-esc="laptop_info['student_id']" />
+											</div>
 											<tr>
 												<td>
 													<t t-if="laptop_info" t-esc="laptop_info['name']" />

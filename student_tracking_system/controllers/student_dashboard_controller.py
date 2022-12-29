@@ -107,11 +107,14 @@ class StsStudentInfo(http.Controller):
     def student_clearance(self, **kw):
         # print(kw)
         student_clearance = None
+        student_info = None
         if kw.get('student_id', False):
             student_clearance = self.get_student_clearance(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id']) 
 
         return request.render('student_tracking_system.student_registration_and_exam_clearence_template', {
-            "student_clearance": student_clearance
+            "student_clearance": student_clearance,
+            "student_info": student_info
         })
 
     def get_student_clearance(self, student_id):
@@ -144,11 +147,14 @@ class StsStudentInfo(http.Controller):
     def extra_curriculam_activity(self, **kw):
         print(kw)
         extra_curriculam = None
+        student_info = None
         if kw.get('student_id',False):
             extra_curriculam = self.get_student_extra_curriculum_info(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id'])
 
         return request.render('student_tracking_system.student_extra_curriculam_activity_template', {
-            "extra_curriculam": extra_curriculam
+            "extra_curriculam": extra_curriculam,
+            "student_info": student_info
         })
 
     def get_student_extra_curriculum_info(self, student_id):
@@ -176,11 +182,14 @@ class StsStudentInfo(http.Controller):
     def disciplinary_action(self, **kw):
         print(kw)
         disciplinary_info = None
+        student_info = None
         if kw.get('student_id',False):
-            disciplinary_info = self.get_student_disciplin_info(kw['student_id'])  
+            disciplinary_info = self.get_student_disciplin_info(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id'])  
 
         return request.render('student_tracking_system.student_disciplinary_action_template', {
-            "disciplinary_info":disciplinary_info
+            "disciplinary_info":disciplinary_info,
+            "student_info":student_info
         })
 
     def get_student_disciplin_info(self, student_id):
@@ -207,11 +216,15 @@ class StsStudentInfo(http.Controller):
     @http.route('/hall/info', auth='public', website=True)
     def hall_info(self, **kw):
         hall_info = None
+        student_info = None
         if kw.get('student_id', False):
             hall_info = self.get_student_hall_info(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id'])
+            
           
         return request.render('student_tracking_system.student_hall_info_template', {
-            "hall_info": hall_info
+            "hall_info": hall_info,
+            "student_info": student_info
         })
 
     def get_student_hall_info(self, student_id):
@@ -234,11 +247,14 @@ class StsStudentInfo(http.Controller):
     @http.route('/laptop/info', auth='public', website=True)
     def laptop_info(self, **kw):
         laptop_info = None
+        student_info = None
         if kw.get('student_id', False):
             laptop_info = self.get_student_laptop_info(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id'])
            
         return request.render('student_tracking_system.student_laptop_info_template', {
-            "laptop_info": laptop_info
+            "laptop_info": laptop_info,
+            "student_info": student_info
         })
 
     def get_student_laptop_info(self, student_id):

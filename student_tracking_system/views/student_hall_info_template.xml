@@ -30,6 +30,9 @@
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
+												<!-- <th class="invisible">
+													StudentId
+												</th> -->
 												<th width="25%">
 													FirstName
 												</th>
@@ -46,7 +49,14 @@
 										</thead>
 
 										<tbody>
+											<div class="invisible">
+												<t t-if="hall_info" t-esc="hall_info['studentId']" />
+											</div>
+										
 											<tr>
+												<!-- <td class="invisible">
+													<t t-if="hall_info" t-esc="hall_info['studentId']" />
+												</td> -->
 												<td>
 													<t t-if="hall_info" t-esc="hall_info['firstName']" />
 												</td>
