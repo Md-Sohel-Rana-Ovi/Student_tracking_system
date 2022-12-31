@@ -11,121 +11,129 @@
                                 <img src="https://2brogamers.com/two_brogamers/static/photo/logoo.png" alt="2BroGamers" />
                             </a>
                         </div> -->
-                        <nav class="Scroll nav" id="nav-menu">
+                        <!-- Scroll -->
+                        <nav class="nav" id="nav-menu">
                             <h4 class="header_close head_close" id="close-menu">
                                 <i class="fa fa-times"></i>
                             </h4>
                             <ul class="nav_list">
+                                <li class="nav_item">
+                                    <t t-if="student_info">
+                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/dashboard?student_id=#{student_info['studentId']}">
+                                            <span>
+                                                Home
+                                            </span>
+                                        </a>
+                                    </t>
+                                    <t t-else="">
+                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/dashboard">
+                                            <span>
+                                                Home
+                                            </span>
+                                        </a>
+                                    </t>
+                                </li>
                                     <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                    View Personal Info
+                                                    Personal Info
                                                 </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/personal/info">
                                                 <span>
-                                                    View Personal Info
+                                                    Personal Info
                                                 </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                     </li>
                                     <li class="nav_item">
                                         <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/educational/info">
                                             <span>
-                                                View Education Info
+                                                Education Info
                                             </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                         </a>
                                     </li>
                                     <li class="nav_item">
                                         <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/academic/info">
                                             <span>
-                                                View Academic Details at Diu
+                                                Academic Details at Diu
                                             </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                         </a>
                                     </li>
                                     <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                    View Registration and Exam Clearence
+                                                    Registration and Exam Clearence
                                                 </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
 
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence">
                                                 <span>
-                                                    View Registration and Exam Clearence
+                                                    Registration and Exam Clearence
                                                 </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                     </li>
-                                    <li class="nav_item">
+                                     <li class="nav_item">
                                         <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/financial_and_ledger/info">
                                             <span>
-                                                View Financial Details/Ledger
+                                                Financial Details/Ledger
                                             </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                         </a>
                                     </li>
-                                    <li class="nav_item">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Others
+                                        </a>
+                                    <div style="width:400px; margin-right:60px;" class="dropdown-menu pr-7" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/alumni/data">
+                                            <span>
+                                                Alumni Data
+                                            </span>
+                                        </a>
                                         <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/waiver_and_scholarship/info">
                                             <span>
-                                                View Waiver and Scholarship
+                                                Waiver and Scholarship
                                             </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                         </a>
-                                    </li>
-                                    <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/extra_curriculam/activity?student_id=#{student_info['studentId']}">
                                                 <span>
                                                 View Extra Curriculam Activities
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/extra_curriculam/activity">
                                                 <span>
-                                                View Extra Curriculam Activities
+                                                Extra Curriculam Activities
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
-                                    </li>
-                                    <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/disciplinary/action?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                View Disciplinary Action
+                                                Disciplinary Action
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/disciplinary/action">
                                                 <span>
-                                                View Disciplinary Action
+                                                Disciplinary Action
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
-                                        </t>	
-                                    </li>
-                                    <li class="nav_item">
+                                        </t>
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                View Hall Info
+                                                Hall Info
                                             </span>
                                                 <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
@@ -133,56 +141,34 @@
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info">
                                                 <span>
-                                                View Hall Info
+                                                Hall Info
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
 
                                         </t>
-                                    </li>
-                                    <li class="nav_item">
                                         <t t-if="student_info">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/laptop/info?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                View Laptop Info
+                                                Laptop Info
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                         <t t-else="">
                                             <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/laptop/info">
                                                 <span>
-                                                View Laptop Info
+                                                Laptop Info
                                             </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
 
                                         </t>
-                                    </li>
-                                    <li class="nav_item">
                                         <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/mentoring/system">
                                             <span>
-                                                View Mentoring System
+                                                Mentoring System
                                             </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                         </a>
-                                    </li>
-                                    <li class="nav_item">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/alumni/data">
-                                            <span>
-                                                View Alumni Data
-                                            </span>
-                                            <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
-                                        </a>
-                                    </li>
-                                    <!-- <li class="nav_item">
-                                        <a href="/web/signup" class="nav_link">
-                                            <i style="color:green" class="fa fa-edit"></i>
-                                            Registration
-                                        </a>
-                                    </li> -->
-                                   
-                            </ul>
+                                    </div>
+                                    </li>                           
+                            </ul>           
                         </nav>
                         <h4 style="margin-left:-1250px! important" class="header_toggle pt-2" id="toggle-menu">
                             <i class="fa fa-align-justify"></i>

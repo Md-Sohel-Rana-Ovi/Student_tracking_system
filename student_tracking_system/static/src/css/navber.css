@@ -56,14 +56,14 @@ header .logo img{
 }
 
 
- /* @media screen and (max-width:992px){
+ @media screen and (max-width:992px){
   header{
     margin-top:10px;
     height:48px;
     justify-content: space-between;
     padding:0 28px;
 
-  }  */
+  }  
   .header_toggle{
     display:inline;
     color:rgb(27, 21, 21);
