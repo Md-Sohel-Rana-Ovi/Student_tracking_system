@@ -40,20 +40,23 @@
 										</thead>
 
 										<tbody>
+										<t t-if="extra_curriculam">
 											<div class="invisible">
 												<t t-if="extra_curriculam" t-esc="extra_curriculam['student_id']" />
 											</div>
 											<t t-foreach="extra_curriculam['activity_id']"
-											t-as="extra_activity">
-											<tr>
-												<td>
-													<t t-if="extra_activity" t-esc="extra_activity['activity']" />
-												</td>
-												<td>
-													<t t-if="extra_activity" t-esc="extra_activity['description']" />
-												</td>
-											</tr>
-										</t>
+												t-as="extra_activity">
+												<tr>
+													<td>
+														<t t-if="extra_activity" t-esc="extra_activity['activity']" />
+													</td>
+													<td>
+														<t t-if="extra_activity" t-esc="extra_activity['description']" />
+													</td>
+												</tr>
+									        </t>
+									    </t>
+										<t t-else=" "/>																					
 										</tbody>
 									</table>
 								</div>

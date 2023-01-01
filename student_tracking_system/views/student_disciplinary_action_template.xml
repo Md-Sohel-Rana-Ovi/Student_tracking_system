@@ -40,20 +40,23 @@
 										</thead>
 
 										<tbody>
-											<div class="invisible">
-												<t t-if="disciplinary_info" t-esc="disciplinary_info['student_id']" />
-											</div>
-											<t t-foreach="disciplinary_info['discipline_id']"
-											t-as="discipline">
-											<tr>
-												<td>
-													<t t-if="discipline" t-esc="discipline['misbehaviour_category_id']" />
-												</td>
-												<td>
-													<t t-if="discipline" t-esc="discipline['misbehaviour_type']" />
-												</td>
-											</tr>
-										</t>
+											<t t-if="disciplinary_info">
+												<div class="invisible">
+													<t t-if="disciplinary_info" t-esc="disciplinary_info['student_id']" />
+												</div>
+												<t t-foreach="disciplinary_info['discipline_id']"
+												t-as="discipline">
+													<tr>
+														<td>
+															<t t-if="discipline" t-esc="discipline['misbehaviour_category_id']" />
+														</td>
+														<td>
+															<t t-if="discipline" t-esc="discipline['misbehaviour_type']" />
+														</td>
+													</tr>
+												</t>
+									        </t>
+											<t t-else=""/>
 										</tbody>
 
 									</table>
