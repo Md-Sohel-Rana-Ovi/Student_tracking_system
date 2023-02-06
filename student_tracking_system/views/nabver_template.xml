@@ -2,13 +2,16 @@
 <odoo>
     <data>
         <!-- custom header -->
-        <template id="student_tracking_system.replace_header4" inherit_id="website.layout" name="Header4">
+        <template id="student_tracking_system.replace_header4" inherit_id="website.layout"
+            name="Header4">
             <xpath expr="//header" position="replace">
                 <section id="student_tracking_system_custom_header">
                     <header>
                         <!-- <div class="logo">
                             <a href="/">
-                                <img src="https://2brogamers.com/two_brogamers/static/photo/logoo.png" alt="2BroGamers" />
+                                <img
+                        src="https://2brogamers.com/two_brogamers/static/photo/logoo.png"
+                        alt="2BroGamers" />
                             </a>
                         </div> -->
                         <!-- Scroll -->
@@ -18,159 +21,254 @@
                             </h4>
                             <ul class="nav_list">
                                 <li class="nav_item">
-                                    <t t-if="student_info">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/dashboard?student_id=#{student_info['studentId']}">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            t-attf-href="/dashboard?student_id=#{student_info['studentId']}">
                                             <span>
                                                 Home
                                             </span>
                                         </a>
                                     </t>
                                     <t t-else="">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/dashboard">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/dashboard">
                                             <span>
                                                 Home
                                             </span>
                                         </a>
                                     </t>
                                 </li>
-                                    <li class="nav_item">
-                                        <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
-                                                <span>
-                                                    Personal Info
-                                                </span>
-                                            </a>
-                                        </t>
-                                        <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/personal/info">
-                                                <span>
-                                                    Personal Info
-                                                </span>
-                                            </a>
-                                        </t>
-                                    </li>
-                                    <li class="nav_item">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/educational/info">
+                                <li class="nav_item">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            t-attf-href="/personal/info?student_id=#{student_info['studentId']}">
+                                            <span>
+                                                Personal Info
+                                            </span>
+                                        </a>
+                                    </t>
+                                    <t t-else="">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/personal/info">
+                                            <span>
+                                                Personal Info
+                                            </span>
+                                        </a>
+                                    </t>
+                                </li>
+                                <li class="nav_item">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/educational/info">
                                             <span>
                                                 Education Info
                                             </span>
                                         </a>
-                                    </li>
-                                    <li class="nav_item">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/academic/info">
+                                    </t>
+                                    <t t-else="">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/educational/info">
+                                            <span>
+                                                Education Info
+                                            </span>
+                                        </a>
+                                    </t>
+                                </li>
+                                <li class="nav_item">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/academic/info">
                                             <span>
                                                 Academic Details at Diu
                                             </span>
                                         </a>
-                                    </li>
-                                    <li class="nav_item">
-                                        <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
-                                                <span>
-                                                    Registration and Exam Clearence
-                                                </span>
-                                            </a>
-                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/academic/info">
+                                            <span>
+                                                Academic Details at Diu
+                                            </span>
+                                        </a>
+                                    </t>
+                                </li>
+                                <li class="nav_item">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            t-attf-href="/registration_and_exam/clearence?student_id=#{student_info['studentId']}">
+                                            <span>
+                                                Registration and Exam Clearence
+                                            </span>
+                                        </a>
+                                    </t>
 
-                                        <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/registration_and_exam/clearence">
-                                                <span>
-                                                    Registration and Exam Clearence
-                                                </span>
-                                            </a>
-                                        </t>
-                                    </li>
-                                     <li class="nav_item">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/financial_and_ledger/info">
+                                    <t t-else="">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            t-attf-href="/registration_and_exam/clearence">
+                                            <span>
+                                                Registration and Exam Clearence
+                                            </span>
+                                        </a>
+                                    </t>
+                                </li>
+                                <li class="nav_item">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/financial_and_ledger/info">
                                             <span>
                                                 Financial Details/Ledger
                                             </span>
                                         </a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                         Others
+                                    </t>
+                                    <t t-else="">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/financial_and_ledger/info">
+                                            <span>
+                                                Financial Details/Ledger
+                                            </span>
                                         </a>
-                                    <div style="width:400px; margin-right:60px;" class="dropdown-menu pr-7" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/alumni/data">
+                                    </t>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <t t-if="student_info" groups="base.group_user">
+                                        <a class="nav-link dropdown-toggle" href="#"
+                                            id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Others
+                                        </a>
+                                    </t>
+                                    <t t-else="">
+                                        <a class="nav-link dropdown-toggle" href="#"
+                                            id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Others
+                                        </a>
+                                    </t>
+
+                                    <div style="width:400px; margin-right:60px;"
+                                        class="dropdown-menu pr-7"
+                                        aria-labelledby="navbarDropdownMenuLink">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/alumni/data">
                                             <span>
                                                 Alumni Data
                                             </span>
                                         </a>
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/waiver_and_scholarship/info">
+
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/waiver_and_scholarship/info">
                                             <span>
                                                 Waiver and Scholarship
                                             </span>
                                         </a>
                                         <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/extra_curriculam/activity?student_id=#{student_info['studentId']}">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/extra_curriculam/activity?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                View Extra Curriculam Activities
-                                            </span>
+                                                    View Extra Curriculam Activities
+                                                </span>
                                             </a>
                                         </t>
                                         <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/extra_curriculam/activity">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/extra_curriculam/activity">
                                                 <span>
-                                                Extra Curriculam Activities
-                                            </span>
+                                                    Extra Curriculam Activities
+                                                </span>
                                             </a>
                                         </t>
                                         <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/disciplinary/action?student_id=#{student_info['studentId']}">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/disciplinary/action?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                Disciplinary Action
-                                            </span>
+                                                    Disciplinary Action
+                                                </span>
                                             </a>
                                         </t>
                                         <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/disciplinary/action">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/disciplinary/action">
                                                 <span>
-                                                Disciplinary Action
-                                            </span>
+                                                    Disciplinary Action
+                                                </span>
                                             </a>
                                         </t>
                                         <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                Hall Info
-                                            </span>
-                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+                                                    Hall Info
+                                                </span>
+                                                <i class="fa fa-arrow-right ms-1 opacity-25 fs-base"
+                                                    style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
                                             </a>
                                         </t>
                                         <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/hall/info">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/hall/info">
                                                 <span>
-                                                Hall Info
-                                            </span>
+                                                    Hall Info
+                                                </span>
                                             </a>
 
                                         </t>
                                         <t t-if="student_info">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/laptop/info?student_id=#{student_info['studentId']}">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/laptop/info?student_id=#{student_info['studentId']}">
                                                 <span>
-                                                Laptop Info
-                                            </span>
+                                                    Laptop Info
+                                                </span>
                                             </a>
                                         </t>
                                         <t t-else="">
-                                            <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/laptop/info">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/laptop/info">
                                                 <span>
-                                                Laptop Info
-                                            </span>
+                                                    Laptop Info
+                                                </span>
                                             </a>
 
                                         </t>
-                                        <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/mentoring/system">
+                                        <a
+                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                            href="/mentoring/system">
                                             <span>
                                                 Mentoring System
                                             </span>
                                         </a>
                                     </div>
-                                    </li>                           
-                            </ul>           
+                                </li>
+                                <!-- <li>
+                                    <a class="nav-link" href="/web/login">
+                                        <b>Sign in</b>
+                                    </a>
+                                </li> -->
+                            </ul>
                         </nav>
-                        <h4 style="margin-left:-1250px! important" class="header_toggle pt-2" id="toggle-menu">
+                        <h4 style="margin-left:-1250px! important" class="header_toggle pt-2"
+                            id="toggle-menu">
                             <i class="fa fa-align-justify"></i>
                             <!-- <i class="fa-regular fa-bars"></i> -->
                         </h4>
@@ -179,12 +277,11 @@
                         const navmenu = document.getElementById('nav-menu'),
                         togglemenu = document.getElementById('toggle-menu'),
                         closemenu = document.getElementById('close-menu')
-                    
                         togglemenu.addEventListener('click', () => {
-                            navmenu.classList.toggle('show')
+                        navmenu.classList.toggle('show')
                         });
                         closemenu.addEventListener('click', () => {
-                            navmenu.classList.remove('show')
+                        navmenu.classList.remove('show')
                         });
                     </script>
                 </section>
