@@ -13,11 +13,11 @@ from odoo.addons.portal.controllers.web import \
 # _logger = logging.getLogger(__name__)
 
 
-class SBACHome(home):
+class StudentTrackingHome(home):
 
     @http.route()
     def web_login(self, redirect=None, *args, **kw):
-        response = super(SBACHome, self).web_login(redirect=redirect, *args, **kw)
+        response = super(StudentTrackingHome, self).web_login(redirect=redirect, *args, **kw)
 
         if not redirect and request.params['login_success']:
             if request.env['res.users'].browse(request.uid).has_group(

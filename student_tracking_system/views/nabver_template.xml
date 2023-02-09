@@ -260,6 +260,20 @@
                                         </a>
                                     </div>
                                 </li>
+<!--                             
+                                <li class="nav_item">
+                                    <a href="/web/login" class="nav_link">
+                                        <i style="color:red" class="fa fa-user"></i>
+                                        Login
+                                    </a>
+                                </li>
+
+                                <li class="nav_item">
+                                    <a href="/web/session/logout?redirect=/" class="nav_link f">
+                                        <i style="color:red" class="fa fa-edit"></i>
+                                        Logout
+                                    </a>
+                                </li> -->
                                 <!-- <li>
                                     <a class="nav-link" href="/web/login">
                                         <b>Sign in</b>
