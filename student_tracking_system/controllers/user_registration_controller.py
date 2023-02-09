@@ -1,18 +1,40 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 from odoo import http
 from odoo.http import request
-import logging
-_logger = logging.getLogger(__name__)
+
+from odoo.addons.web.controllers.main import ensure_db
+from odoo.addons.website.controllers.main import Home
 
 
+from odoo.addons.portal.controllers.web import \
+    Home as home
 
-# class UserRegistration(http.Controller):
-#     @http.route('/', auth='user', website=True, csrf=False)
-#     def sbac_user_registration(self, **kw):
-#         _logger.info(kw)
-#         user_id = request.session.uid
-#         user_obj = request.env['res.users'].sudo().browse(user_id)
-
-#         if user_obj.partner_id:
-#             return request.redirect('/dashboard')
+# _logger = logging.getLogger(__name__)
 
 
+class SBACHome(home):
+
+    @http.route()
+    def web_login(self, redirect=None, *args, **kw):
+        response = super(SBACHome, self).web_login(redirect=redirect, *args, **kw)
+
+        if not redirect and request.params['login_success']:
+            if request.env['res.users'].browse(request.uid).has_group(
+                    'base.group_user'):
+                redirect = '/dashboard?' + request.httprequest.query_string.decode()
+            else:
+                if kw.get("redirect"):
+                    redirect = kw.get("redirect")
+                else:
+                    redirect = '/'
+
+            return request.redirect(redirect)
+        return response
+
+    def _login_redirect(self, uid, redirect=None):
+        # if request.env.user.is_parent:
+        #     return '/my/child'
+        if redirect:
+            return redirect
+        return '/dashboard'
