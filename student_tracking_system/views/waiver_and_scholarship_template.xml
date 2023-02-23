@@ -17,49 +17,43 @@
 												</h2>
 											</div>
 											<div class="col-sm-6">
-												<!-- <a href="/dashboard" class="btn btn-info">
-													<i class="bi bi-arrow-left-circle-fill">
-													</i>
-													<span>
-														Back to Dashboard
-													</span>
-												</a> -->
 											</div>
 										</div>
 									</div>
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="25%">
-													Semester
+												<th width="35%">
+													Student ID
 												</th>
-												<th width="25%">
-													Waiver
+												<th width="35%">
+													Waiver Amount
 												</th>
-												<th width="25%">
-													W.Amount
+												<th width="30%">
+													Semester ID
 												</th>
-												<th width="25%">
-													W.Type
-												</th>
+												
 											</tr>
 										</thead>
 
 										<tbody>
-											<tr>
-												<td>
-													<p>12th Semester</p>
-												</td>
-												<td>
-													<p>5000</p>
-												</td>
-												<td>
-													<p>60000</p>
-												</td>
-												<td>
-													<p>result</p>
-												</td>
-											</tr>
+										<t t-if="student_waiver_info">
+											<t t-foreach="student_waiver_info"
+												t-as="student_waiver">
+												<tr>
+													<td>
+														<t t-if="student_waiver" t-esc="student_waiver['studenT_ID']" />
+													</td>
+													<td>
+														<t t-if="student_waiver" t-esc="student_waiver['waiver_Amount']" />
+													</td>
+													<td>
+														<t t-if="student_waiver" t-esc="student_waiver['semesteR_ID']" />
+													</td>
+												</tr>
+									        </t>
+									    </t>
+										<t t-else=" "/>																					
 										</tbody>
 									</table>
 								</div>

@@ -17,60 +17,58 @@
 												</h2>
 											</div>
 											<div class="col-sm-6">
-												<!--
-												<a href="/dashboard" class="btn btn-info">
-												<i class="bi bi-arrow-left-circle-fill">
-												</i>
-												<span>
-												Back to Dashboard
-												</span>
-												</a>
-												-->
 											</div>
 										</div>
 									</div>
 									<table class="table table-striped table-hover">
 										<thead>
 											<tr>
-												<th width="25%">
-													Status
+												<th width="15%">
+													Student ID
 												</th>
-												<th width="25%">
-													Organization
+												<th width="15%">
+													Student Name
 												</th>
-												<th width="25%">
-													Date
+												<th width="20%">
+													Program Name
 												</th>
-												<th width="25%">
-													Description
+												<th width="15%">
+													Student Status
+												</th>
+												<th width="20%">
+													Pass Out Date
+												</th>
+												<th width="15%">
+													Convocation Number
 												</th>
 											</tr>
 										</thead>
+
 										<tbody>
 											<tr>
 												<td>
-													<p>
-														Alumni
-													</p>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['studenT_ID']" />
 												</td>
 												<td>
-													<p>
-														Daffodil Computers Limited
-													</p>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['studenT_NAME']" />
 												</td>
 												<td>
-													<p>
-														06-11-18
-													</p>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['prograM_NAME']" />
 												</td>
 												<td>
-													<p>As a graduate, you become a part of the student alumni association for your university.
-														
-													</p>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['studentStatus']" />
 												</td>
+												<td>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['pasS_OUT_DATE']" />
+												</td>
+												<td>
+													<t t-if="student_alumni_info" t-esc="student_alumni_info['convocation_Number']" />
+												</td>
+												
 											</tr>
 										</tbody>
 									</table>
+									
 								</div>
 							</div>
 						</div>

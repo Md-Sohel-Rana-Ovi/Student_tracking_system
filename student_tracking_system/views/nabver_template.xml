@@ -160,22 +160,47 @@
                                     <div style="width:400px; margin-right:60px;"
                                         class="dropdown-menu pr-7"
                                         aria-labelledby="navbarDropdownMenuLink">
-                                        <a
-                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
-                                            href="/alumni/data">
-                                            <span>
-                                                Alumni Data
-                                            </span>
-                                        </a>
-
-                                        <a
-                                            class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
-                                            href="/waiver_and_scholarship/info">
-                                            <span>
-                                                Waiver and Scholarship
-                                            </span>
-                                        </a>
-                                        <t t-if="student_info">
+                                        <t t-if="student_info" groups="base.group_user">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/alumni/data?student_id=#{student_info['studentId']}">
+                                                <span>
+                                                    Alumni Data
+                                                </span>
+                                            </a>
+                                        </t>
+    
+                                        <t t-else="">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/alumni/data">
+                                                <span>
+                                                    Alumni Data
+                                                </span>
+                                            </a>
+                                        </t>
+                                       
+                                        <t t-if="student_info" groups="base.group_user">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/waiver_and_scholarship/info?student_id=#{student_info['studentId']}">
+                                                <span>
+                                                    Waiver and Scholarship
+                                                </span>
+                                            </a>
+                                        </t>
+    
+                                        <t t-else="">
+                                            <a
+                                                class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
+                                                t-attf-href="/waiver_and_scholarship/info">
+                                                <span>
+                                                    Waiver and Scholarship
+                                                </span>
+                                            </a>
+                                        </t>
+                                        
+                                        <t t-if="student_info" groups="base.group_user">
                                             <a
                                                 class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
                                                 t-attf-href="/extra_curriculam/activity?student_id=#{student_info['studentId']}">
@@ -193,7 +218,7 @@
                                                 </span>
                                             </a>
                                         </t>
-                                        <t t-if="student_info">
+                                        <t t-if="student_info" groups="base.group_user">
                                             <a
                                                 class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
                                                 t-attf-href="/disciplinary/action?student_id=#{student_info['studentId']}">
@@ -211,7 +236,7 @@
                                                 </span>
                                             </a>
                                         </t>
-                                        <t t-if="student_info">
+                                        <t t-if="student_info" groups="base.group_user">
                                             <a
                                                 class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
                                                 t-attf-href="/hall/info?student_id=#{student_info['studentId']}">
@@ -232,7 +257,7 @@
                                             </a>
 
                                         </t>
-                                        <t t-if="student_info">
+                                        <t t-if="student_info" groups="base.group_user">
                                             <a
                                                 class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between"
                                                 t-attf-href="/laptop/info?student_id=#{student_info['studentId']}">

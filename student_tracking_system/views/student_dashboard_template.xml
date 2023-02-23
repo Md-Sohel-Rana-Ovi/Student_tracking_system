@@ -239,12 +239,23 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/waiver_and_scholarship/info">
-														<span>
-															View Waiver and Scholarship
-														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
-													</a>
+													<t t-if="student_info">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/waiver_and_scholarship/info?student_id=#{student_info['studentId']}">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
+													</t>
+
+													<t t-else="">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/waiver_and_scholarship/info">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
+													</t>
 												</div>
 											</div>
 										</div>
@@ -285,12 +296,6 @@
 															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
 														</a>
 													</t>
-													<!-- <a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/extra_curriculam/activity">
-														<span>
-															View Extra Curriculam Activities
-														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
-													</a> -->
 												</div>
 											</div>
 										</div>
@@ -456,12 +461,23 @@
 													</div>
 												</div>
 												<div class="bg-body-light rounded-bottom">
-													<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" href="/alumni/data">
-														<span>
-															View Alumni Data
-														</span>
-														<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
-													</a>
+													<t t-if="student_info">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/alumni/data?student_id=#{student_info['studentId']}">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
+													</t>
+
+													<t t-else="">
+														<a class="block-content block-content-full block-content-sm fs-sm fw-medium d-flex align-items-center justify-content-between" t-attf-href="/alumni/data">
+															<span>
+																View Registration and Exam Clearence
+															</span>
+															<i class="fa fa-arrow-right ms-1 opacity-25 fs-base" style="font-family: &quot;Font Awesome 6 Free&quot;, Bangla997, sans-serif;"></i>
+														</a>
+													</t>
 												</div>
 											</div>
 										</div>

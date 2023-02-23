@@ -140,8 +140,35 @@ class StsStudentInfo(http.Controller):
 
     @http.route('/waiver_and_scholarship/info', auth='public', website=True)
     def waiver_and_scholarship_info(self, **kw):
+        print(kw)
+        student_waiver_info = None
+        student_info = None
+        if kw.get('student_id', False):
+            student_waiver_info = self.get_student_waiver(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id']) 
 
-        return request.render('student_tracking_system.student_waiver_and_scholarship_info_template', {})
+       
+        return request.render('student_tracking_system.student_waiver_and_scholarship_info_template', {
+             "student_waiver_info": student_waiver_info,
+            "student_info": student_info
+        })
+
+    def get_student_waiver(self, student_id):
+        try:
+            url = "http://empapp.daffodilvarsity.edu.bd/api.student.track/api/Students/GetWaiver/" + str(student_id)
+            headers = {
+                "Content-Type": "application/json",
+                "clientId": "755435CF682C3787927BB3F3EF16A",
+                "clientSecret": "m5GQzjsTuR5Z84Al8Z44beA3gcZw6UvH",
+            }
+            response = requests.get(url=url, headers=headers)
+            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+                data = response.json()
+                print(data)
+                return data
+            return None
+        except:
+            return None    
 
     @http.route('/extra_curriculam/activity', auth='public', website=True)
     def extra_curriculam_activity(self, **kw):
@@ -287,9 +314,35 @@ class StsStudentInfo(http.Controller):
         return request.render('student_tracking_system.student_mentoring_system_template', {})
 
     @http.route('/alumni/data', auth='public', website=True)
-    def alumni_data(self, **kw):
+    def student_alumni_info(self, **kw):
+        print(kw)
+        student_alumni_info = None
+        student_info = None
+        if kw.get('student_id', False):
+            student_alumni_info = self.get_student_alumni_info(kw['student_id'])
+            student_info = self.get_student_info(kw['student_id']) 
 
-        return request.render('student_tracking_system.student_alumni_data_template', {})
+        return request.render('student_tracking_system.student_alumni_data_template', {
+            "student_alumni_info": student_alumni_info,
+            "student_info": student_info
+        })
+       
+    def get_student_alumni_info(self, student_id):
+        try:
+            url = "http://empapp.daffodilvarsity.edu.bd/api.student.track/api/Students/" + str(student_id)
+            headers = {
+                "Content-Type": "application/json",
+                "clientId": "755435CF682C3787927BB3F3EF16A",
+                "clientSecret": "m5GQzjsTuR5Z84Al8Z44beA3gcZw6UvH",
+            }
+            response = requests.get(url=url, headers=headers)
+            if response.status_code == 200 or response.status_code == 201 or response.status_code == 302:
+                data = response.json()
+                print(data)
+                return data
+            return None
+        except:
+            return None 
 
     @http.route('/search', auth='public', website=True)
     def search_view(self, **kw):
